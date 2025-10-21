@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
 
@@ -15,6 +16,29 @@ export default function Footer() {
                                 width={300} height={100} />
                             <br />
                             <p className="small-text"><i>Building Communities, One Home at a Time.</i></p>
+
+                            <div className="flex flex-row gap-3 mt-5">
+                                <Image 
+                                    src="/svg/facebook-white.svg" 
+                                    alt="phone"
+                                    width={25}
+                                    height={25} />
+                                <Image 
+                                    src="/svg/instagram-white.svg" 
+                                    alt="phone"
+                                    width={25}
+                                    height={25} />
+                                <Image 
+                                    src="/svg/youtube-white.svg" 
+                                    alt="phone"
+                                    width={25}
+                                    height={25} />
+                                <Image 
+                                    src="/svg/linkedin-white.svg" 
+                                    alt="phone"
+                                    width={25}
+                                    height={25} />
+                            </div>
                         </div>
 
                         <div className="flex flex-col w-1/5">
@@ -63,7 +87,7 @@ export default function Footer() {
 
             <div className="flex flex-row justify-between">
                 <p className="small-text">© 2024 All Rights Reserved. Affordable Homes of South Texas, Inc.</p>
-                <p className="small-text">Made X RGVision Media</p>
+                <Link href="https://rgvisionmedia.com/"><p className="small-text">Made X RGVision Media</p></Link>
             </div>
 
         </div>

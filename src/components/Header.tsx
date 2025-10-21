@@ -3,11 +3,11 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 
   const navItems = [
-    { name: "ABOUT", link: "/about" },
-    { name: "SUBDIVISIONS", link: "/subdivisions" },
-    { name: "REPAIRS", link: "/repairs" },
-    { name: "MAKE A PAYMENT", link: "/make-a-payment" },
-    { name: "CONTACT", link: "/contact" },
+    { name: "About", link: "/about" },
+    { name: "Subdivisions", link: "/subdivisions" },
+    { name: "Repairs", link: "/repairs" },
+    { name: "Make A Payment", link: "/make-a-payment" },
+    { name: "Contact", link: "/contact" },
   ];
 
 export default function Header() {
@@ -43,11 +43,20 @@ export default function Header() {
                             width={20}
                             height={20} />
                         <Image 
+                            src="/svg/instagram-white.svg" 
+                            alt="phone"
+                            width={20}
+                            height={20} />
+                        <Image 
+                            src="/svg/youtube-white.svg" 
+                            alt="phone"
+                            width={20}
+                            height={20} />
+                        <Image 
                             src="/svg/linkedin-white.svg" 
                             alt="phone"
                             width={20}
                             height={20} />
-
                     </div>
                 </div>
             </div>
