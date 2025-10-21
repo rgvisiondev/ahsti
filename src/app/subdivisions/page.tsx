@@ -1,7 +1,6 @@
 import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
-import MapAdmin from "@/components/maps/map-admin";
-import Image from "next/image";
+import ContactSection from "@/components/contactsection";
 
 export default function Subdivisions() {
   return (
@@ -84,47 +83,7 @@ export default function Subdivisions() {
           <h4>CONTACT US</h4>
           <h2>Reach Out To Our Administration Building</h2>
 
-          <div className="flex flex-row mt-5 gap-5">
-
-            <div className="flex flex-col w-1/2 text-left">
-                    <div className="flex flex-col gap-3 pb-5">
-                        <div className="flex flow-row gap-3">
-                            <Image 
-                                src="/svg/phone.svg" 
-                                alt="phone"
-                                width={20}
-                                height={20} />
-                            <p className="small-text text-left">956-687-6263</p>
-                        </div>
-
-                        <div className="flex flow-row gap-3">
-                            <Image 
-                                src="/svg/fax.svg" 
-                                alt="phone"
-                                width={20}
-                                height={20} />
-                            <p className="small-text text-left">FAX: 956-687-6263</p>
-                        </div>
-
-
-                        <div className="flex flow-row gap-3">
-                            <Image 
-                                src="/svg/map.svg" 
-                                alt="phone"
-                                width={20}
-                                height={20} />
-                            <p className="small-text text-left">1420 Erie Ave, McAllen, TX 78501</p>
-                        </div>
-
-                    </div>
-              <MapAdmin />
-            </div>
-
-            <div className="bg-white flex w-1/2 border-1 border-gray-300 shadow-md rounded-lg p-5">
-              <p>contact form</p>
-            </div>
-
-          </div>
+          <ContactSection />
 
       </div>
       

@@ -20,7 +20,7 @@ export default function ImageAccordion() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex h-[450px] w-full overflow-hidden rounded-2xl">
+    <div className="flex h-[450px] w-full overflow-hidden">
       {images.map((img, index) => (
         <div
           key={index}
