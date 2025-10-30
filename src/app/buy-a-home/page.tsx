@@ -1,6 +1,7 @@
 import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
+import { CTASection } from "@/components/cta";
 
 export default function BuyAHome() {
   return (
@@ -32,39 +33,57 @@ export default function BuyAHome() {
         </div>
 
         <div className="w-1/2 bg-gray-200 rounded-lg"></div>
-
     </div>
 
+    {/* steps section 2 */}
+    <div className="w-full bg-white">
+      <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
+        
+      <div className="w-1/2 bg-gray-200 rounded-lg"></div>
 
-    {/* cta section */}
-    <div className="bg-[url(/images/house1.png)] bg-fixed bg-cover bg-no-repeat bg-center">
-    <div className="bg-gradient-to-r from-primary/95 to-secondary/95 bg-blend-overlay py-10 text-white">
-      <div className="w-[1140px] mx-auto flex flex-row justify-between items-stretch">
-        <div className="w-3/5 flex flex-col justify-center">
-          <h4>BUILD YOUR FUTURE WITH AHSTI</h4>
-          <h2>Ready to Own Your Home?</h2>
-          <p>
-            Take the first step toward homeownership with guidance and support from AHSTI. 
-            We’ll help you achieve homeownership and find an affordable, safe, and beautiful place to call your own.
-          </p>
+        <div className="w-1/2">
+          <h4>WHAT IS AHSTI?</h4>
+          <h2 className="text-base/12">A Nonprofit Helping Families Build Homes.</h2>
+          <p className="mt-3">Unlike traditional builders or lenders, AHSTI is community-driven — not profit-driven. We focus on affordable financing, energy-efficient design, and personalized support for each buyer.
+            <br /><br />
+            From credit counseling to closing, we’re with you every step of the way.</p>
         </div>
 
-        <div className="w-1/4 flex flex-col items-center justify-center gap-5">
-          <Button className="w-[200px] py-6 mt-2" size="lg" variant="secondary">
-            Buy A Home
-          </Button>
-          <Button className="w-[200px] py-6 mt-2" size="lg" variant="secondary">
-            View Locations
-          </Button>
-        </div>
       </div>
     </div>
+
+    {/* steps section 3 */}
+      <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
+        <div className="w-1/2">
+          <h4>WHAT IS PROGRAM ELIGIBILITY?</h4>
+          <h2 className="text-base/12">Simple requirements. Real opportunities.</h2>
+          <p className="mt-3">AHSTI homeownership programs are designed for working families who meet income and credit guidelines. Eligibility is based on your household size, income level, and financial readiness. We’ll guide you through every step.
+            </p>
+            <Button className="mt-5">View Current HUD Income Limits</Button>
+        </div>
+
+        <div className="w-1/2 bg-gray-200 rounded-lg"></div>
     </div>
 
+    {/* steps section 4 */}
+    <div className="w-full bg-white">
+      <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
 
+      <div className="w-1/2 bg-gray-200 rounded-lg"></div>
 
+        <div className="w-1/2">
+          <h4>WHAT KIND OF HOMES DOES AHSTI BUILD?</h4>
+          <h2 className="text-base/12">Built With Care, Designed For Your Family’s Future.</h2>
+          <p className="mt-3">Our homes are designed to be affordable, durable, and energy-efficient. Each one is thoughtfully built in safe, growing neighborhoods close to schools, parks, and amenities.
+            <br /><br />
+            Whether you’re buying your first home or planning for your family’s future, AHSTI has a design that fits your lifestyle and budget.</p>
+        </div>
 
+      </div>
+    </div>
 
+    {/* cta section */}
+    <CTASection />
 
       {/* Contact section */}
       <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col text-center">

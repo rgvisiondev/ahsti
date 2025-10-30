@@ -1,6 +1,7 @@
 import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
+import { CTASection } from "@/components/cta";
 
 export default function MakeAPayment() {
   return (
@@ -21,12 +22,34 @@ export default function MakeAPayment() {
       </div>
       </div>
 
+    <div className="py-5 w-[1140px] bg-blue-100 mx-auto rounded-lg text-center mt-10">
+      <div>
+        <p><b>Reminder: </b>We recommend that you<b> do NOT schedule your payment more than 5 days in advance.</b></p>
+      </div>
+
+    </div>
+
     {/* subdivisions section */}
       <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
         <div className="w-1/2">
-            <h4>MISSION, TX</h4>
-            <h2 className="text-base/12">Speedy Trails</h2>
-            <p className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+            <h4>ONLINE PAYMENTS</h4>
+            <h2 className="text-base/12">Getting Started</h2>
+            <p className="mt-3">
+              <b>1. Register Your Account</b><br />
+                Go to the login page and click on:
+                "Register: First-time users must register."
+                (Located in the grey box under the login section.)
+                <br /><br />
+                <b>2. Gather Your Information</b><br />
+                Loan Number (found on your monthly mortgage statement) If you don’t have a statement, call (956) 687-6263 and request your loan number.
+                Social Security Number
+                <br /><br />
+                <b>3. Complete Registration</b><br />
+                After entering your information, confirm your account to begin using the portal.
+                <br /><br />
+                <b>4. Make Your Payment</b><br />
+                Once logged in, you’ll be able to make a secure mortgage payment.
+            </p>
             <Button className="w-[200px] py-6 mt-5"  size="lg">Learn More</Button>
        </div>
 
@@ -40,38 +63,22 @@ export default function MakeAPayment() {
 
         <div className="w-1/2 bg-gray-200 rounded-lg"></div>
         <div className="w-1/2">
-            <h4>MISSION, TX</h4>
-            <h2 className="text-base/12">Speedy Trails</h2>
-            <p className="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-            <Button className="w-[200px] py-6 mt-5"  size="lg">Learn More</Button>
+            <h4>SECURITY TIPS</h4>
+            <h2 className="text-base/12">Account Security</h2>
+
+            <ul className="list-disc mt-3 ml-5 gap-5 flex flex-col">
+              <li>Keep your password in a safe place.</li>
+              <li>If you enter the wrong password three times, your account will be locked.</li>
+              <li>If your account gets locked, you’ll need to call a 1-800 number (provided on the lockout screen) to unlock it.</li>
+              <li>Contact AHSTI immediately if you notice any suspicious activity on your account.</li>
+            </ul>
+
        </div>
     </div>
 </div>
 
     {/* cta section */}
-    <div className="bg-[url(/images/house1.png)] bg-fixed bg-cover bg-no-repeat bg-center">
-    <div className="bg-gradient-to-r from-primary/95 to-secondary/95 bg-blend-overlay py-10 text-white">
-      <div className="w-[1140px] mx-auto flex flex-row justify-between items-stretch">
-        <div className="w-3/5 flex flex-col justify-center">
-          <h4>BUILD YOUR FUTURE WITH AHSTI</h4>
-          <h2>Ready to Own Your Home?</h2>
-          <p>
-            Take the first step toward homeownership with guidance and support from AHSTI. 
-            We’ll help you achieve homeownership and find an affordable, safe, and beautiful place to call your own.
-          </p>
-        </div>
-
-        <div className="w-1/4 flex flex-col items-center justify-center gap-5">
-          <Button className="w-[200px] py-6 mt-2" size="lg" variant="secondary">
-            Buy A Home
-          </Button>
-          <Button className="w-[200px] py-6 mt-2" size="lg" variant="secondary">
-            View Locations
-          </Button>
-        </div>
-      </div>
-    </div>
-    </div>
+    <CTASection />
 
       {/* Contact section */}
       <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col text-center">

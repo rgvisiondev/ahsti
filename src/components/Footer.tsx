@@ -3,6 +3,36 @@ import Link from "next/link";
 
 export default function Footer() {
 
+    let links = [
+        { name: "Home", href: "/" },
+        { name: "About", href: "/about" },
+        { name: "Subdivisions", href: "/subdivisions" },
+        { name: "Buy A House", href: "/buy-a-house" },
+        { name: "Make a Payment", href: "/make-a-payment" },
+        { name: "Repairs & Support", href: "/repairs-support" },
+        { name: "Noticies & Policies", href: "/notices-policies" },
+        { name: "Contact Us", href: "/contact" },
+    ];
+
+    let subdivisions = [
+        "Crockett Estates",
+        "Crown Haven",
+        "Jaguar Heights",
+        "Lakewood Estates",
+        "Mid Valley Estates",
+        "Speedy Trails",
+        "Stonebriar",
+        "Tiger Crossing",
+    ];
+
+    let locations = [
+        "Administration Building",
+        "Homeownership Center",
+        "Construction Services Building",
+        "Weslaco Branch",
+        "Fred Munguia Training House",
+    ];
+
   return (
     <div className="bg-gradient-to-r from-primary to-secondary">
         
@@ -43,35 +73,31 @@ export default function Footer() {
 
                         <div className="flex flex-col w-1/5">
                             <h4>Quick Links</h4>
-                            <p className="small-text">Home</p>
-                            <p className="small-text">About</p>
-                            <p className="small-text">Subdivisions</p>
-                            <p className="small-text">Buy A House</p>
-                            <p className="small-text">Make a Payment</p>
-                            <p className="small-text">Repairs & Support</p>
-                            <p className="small-text">Noticies & Policies</p>
-                            <p className="small-text">Contact Us</p>
+                            {
+                                links.map((link, index) => (
+                                    <p key={index} className="small-text">
+                                        <Link href={link.href}>{link.name}</Link>
+                                    </p>
+                                ))
+                            }
                         </div>
 
                         <div className="flex flex-col w-1/5">
                             <h4>Subdivisions</h4>
-                            <p className="small-text">Crockett Estates</p>
-                            <p className="small-text">Crown Haven</p>
-                            <p className="small-text">Jaguar Heights</p>
-                            <p className="small-text">Lakewood Estates</p>
-                            <p className="small-text">Mid Valley Estates</p>
-                            <p className="small-text">Speedy Trails</p>
-                            <p className="small-text">Stonebriar</p>
-                            <p className="small-text">Tiger Crossing</p>
+                            {
+                                subdivisions.map((subdivision, index) => (
+                                    <p key={index} className="small-text">{subdivision}</p>
+                                ))
+                            }
                         </div>
 
                         <div className="flex flex-col w-1/5">
                             <h4>Locations</h4>
-                            <p className="small-text">Administration Building</p>
-                            <p className="small-text">Homeownership Center</p>
-                            <p className="small-text">Construction Services Building</p>
-                            <p className="small-text">Weslaco Branch</p>
-                            <p className="small-text">Fred Munguia Training House</p>
+                            {
+                                locations.map((location, index) => (
+                                    <p key={index} className="small-text">{location}</p>
+                                ))
+                            }
                         </div>
 
                         <div className="flex flex-col w-1/5">
