@@ -37,7 +37,7 @@ export default function MakeAPayment() {
             <p className="mt-3">
               <b>1. Register Your Account</b><br />
                 Go to the login page and click on:
-                "Register: First-time users must register."
+                &quot;Register: First-time users must register.&quot;
                 (Located in the grey box under the login section.)
                 <br /><br />
                 <b>2. Gather Your Information</b><br />

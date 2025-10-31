@@ -1,7 +1,6 @@
 import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
-import { CTASection } from "@/components/cta";
 
 export default function Contact() {
   return (
