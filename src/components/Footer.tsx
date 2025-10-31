@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
 
-    let links = [
+    const links = [
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
         { name: "Subdivisions", href: "/subdivisions" },
@@ -14,7 +14,7 @@ export default function Footer() {
         { name: "Contact Us", href: "/contact" },
     ];
 
-    let subdivisions = [
+    const subdivisions = [
         "Crockett Estates",
         "Crown Haven",
         "Jaguar Heights",
@@ -25,7 +25,7 @@ export default function Footer() {
         "Tiger Crossing",
     ];
 
-    let locations = [
+    const locations = [
         "Administration Building",
         "Homeownership Center",
         "Construction Services Building",
