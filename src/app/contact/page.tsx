@@ -1,6 +1,7 @@
 import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
+import { ContactTabs } from "@/components/ContactTabs";
 
 export default function Contact() {
   return (
@@ -25,7 +26,7 @@ export default function Contact() {
       <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col text-center">
           <h4>CONTACT US</h4>
           <h2>Reach Out To Our Administration Building</h2>
-          <ContactSection />
+          <ContactTabs />
       </div>
       
       {/* carousel section */}

@@ -2,6 +2,7 @@ import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
 import { CTASection } from "@/components/cta";
+import CommunitiesCarousel from "@/components/carousels/CommunitiesCarousel";
 
 export default function Subdivisions() {
   return (
@@ -27,6 +28,7 @@ export default function Subdivisions() {
         <div className="w-full text-center">
             <h4>OUR COMMUNITIES</h4>
             <h2 className="text-base/12">Affordable. Sustainable. Community-Focused.</h2>
+            <CommunitiesCarousel />
             
        </div>
 

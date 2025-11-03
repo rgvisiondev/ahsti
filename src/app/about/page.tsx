@@ -2,6 +2,7 @@ import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
 import { CTASection } from "@/components/cta";
+import Timeline from "@/components/Timeline";
 
 export default function About() {
   return (
@@ -27,6 +28,9 @@ export default function About() {
         <div className="w-full text-center">
           <h4>HISTORY OF AHSTI</h4>
           <h2>Building Stronger Communities In The RGV</h2>
+          <div className="mt-5">
+          <Timeline />
+          </div>
         </div>
 
     </div>
@@ -40,7 +44,7 @@ export default function About() {
       <div className="bg-gradient-to-r from-primary/95 to-secondary/95 bg-blend-overlay w-1/2 text-white">
         <div className="w-[570px] py-20 pl-5">
           <h4>OUR IMPACT</h4>
-          <h2>Changing Lives</h2>
+          <h2>Changing Lives,<br /> One Family at a Time</h2>
           <p>Owning our first home was a dream that always felt just out of reach. With AHSTI’s help, that dream finally came true. From the first meeting to the day we received our keys, their team treated us like family. They didn’t just help us buy a house, they helped us build a future. Our kids finally have a safe place to grow up, and we now have the stability we always hoped for. AHSTI gave us more than a home; they gave us hope.</p>
           <p>
           <br /><b>-The Ramirez Family</b><br />
@@ -56,8 +60,30 @@ export default function About() {
     {/* team section */}
       <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col gap-5 flex flex-col">
         <div className="w-full text-center">
-          <h4>HISTORY OF AHSTI</h4>
-          <h2>Building Stronger Communities In The RGV</h2>
+          <h4>OUR TEAM</h4>
+          <h2>Meet the Heart of AHSTI</h2>
+          <div className="flex justify-center w-full">
+            <div className="grid grid-cols-3 gap-10 mt-10 w-full flex flex-row">
+
+              <div className="flex w-full flex-col items-center">
+                <div className="bg-primary w-full h-[100px]"></div>
+                <h3>Myra L. Martinez</h3>
+                <p>Executive Vice President/COO</p>
+              </div>
+
+              <div className="flex w-full flex-col items-center">
+                <div className="bg-primary w-full h-[100px]"></div>
+                <h3>Cynthia Torres</h3>
+                <p>Executive Vice President/CFO</p>
+              </div>
+
+              <div className="flex w-full flex-col items-center">
+                <div className="bg-primary w-full h-[100px]"></div>
+                <h3>Aidee Castro</h3>
+                <p>Vice President/Director of Lending</p>
+              </div>
+            </div>
+          </div>
         </div>
 
     </div>
