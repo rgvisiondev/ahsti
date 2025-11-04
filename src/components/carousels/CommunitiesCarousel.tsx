@@ -7,11 +7,14 @@ import 'swiper/css/pagination';
 import Image from "next/image";
 
 const items = [
-  { location: "MISSION, TX", name: "SPEEDY TRAILS", backgroundImage: "/subdivisions/speedy-trails.png" },
-  { location: "MISSION, TX", name: "SPEEDY TRAILS", backgroundImage: "/subdivisions/speedy-trails.png" },
-  { location: "MISSION, TX", name: "SPEEDY TRAILS", backgroundImage: "/subdivisions/speedy-trails.png" },
-  { location: "MISSION, TX", name: "SPEEDY TRAILS", backgroundImage: "/subdivisions/speedy-trails.png" },
-  { location: "MISSION, TX", name: "SPEEDY TRAILS", backgroundImage: "/subdivisions/speedy-trails.png" },
+  { location: "MISSION, TX", logo: "/subdivisions/white/crockett-estates.png", backgroundImage: "/subdivisions/crockett-estates.png" },
+  { location: "MERCEDES, TX", logo: "/subdivisions/white/crown-haven.png", backgroundImage: "/subdivisions/crown-haven.png" },
+  { location: "EDINBURG, TX", logo: "/subdivisions/white/jaguar-heights.png", backgroundImage: "/subdivisions/speedy-trails.png" },
+  { location: "SAN JUAN, TX", logo: "/subdivisions/white/lakewood-estates.png", backgroundImage: "/subdivisions/speedy-trails.png" },
+  { location: "WESLACO, TX", logo: "/subdivisions/white/mid-valley-estates.png", backgroundImage: "/subdivisions/mid-valley-estates.png" },
+  { location: "MISSION, TX", logo: "/subdivisions/white/speedy-trails.png", backgroundImage: "/subdivisions/speedy-trails.png" },
+  { location: "MCALLEN, TX", logo: "/subdivisions/white/stonebriar.png", backgroundImage: "/subdivisions/speedy-trails.png" },
+  { location: "MERCEDES, TX", logo: "/subdivisions/white/tiger-crossing.png", backgroundImage: "/subdivisions/tiger-crossing.png" },
 ];
 
 export default function CommunitiesCarousel() {
@@ -39,8 +42,8 @@ export default function CommunitiesCarousel() {
             <div className="w-full border border-gray-300 shadow-md rounded-lg mb-10 text-center bg-cover bg-center" style={{ backgroundImage: `url(${item.backgroundImage})` }}>
                 <div className="bg-black/50 p-5 text-white rounded-lg flex flex-col justify-end h-[350px]">
                     <h4>{item.location}</h4>
-                    < hr className="w-1/2 mx-auto" />
-                    <h3>{item.name}</h3>
+                    < hr className="w-1/2 mx-auto pb-1" />
+                    <Image src={item.logo} alt={`${item.location} logo`} width={200} height={100} className="mx-auto" />
                 </div>
             </div>
           </SwiperSlide>
