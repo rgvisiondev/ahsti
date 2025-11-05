@@ -11,77 +11,74 @@ export function RepairsAccordion() {
     <Accordion
       type="single"
       collapsible
-      className="w-full"
+      className="w-full flex flex-col gap-3 mt-5" // adds spacing between blobs
       defaultValue="item-1"
     >
-      <AccordionItem value="item-1">
-        <AccordionTrigger><p>Project Imagine Tomorrow -McAllen homeowners only</p></AccordionTrigger>
+      <AccordionItem
+        value="item-1"
+        className="bg-white shadow-md rounded-2xl p-4 transition-all hover:shadow-lg"
+      >
+        <AccordionTrigger>
+          <p>Project Imagine Tomorrow - McAllen homeowners only</p>
+        </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            Our flagship product combines cutting-edge technology with sleek
-            design. Built with premium materials, it offers unparalleled
-            performance and reliability.
+            In a partnership between AHSTI and The City of McAllen, Project Imagine Tomorrow encourages homeowners to repair or demolish their dilapidated homes through tax incentives and practical home mortgage financing solutions.  Restricted to households at 80% of the area median income or below. 
           </p>
-          <p>
-            Key features include advanced processing capabilities, and an
-            intuitive user interface designed for both beginners and experts.
-          </p>
-          <Button>
-            Next Steps
-          </Button>
+          <Button>Next Steps</Button>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-2">
-        <AccordionTrigger><p>New Beginnings -McAllen homeowners only</p></AccordionTrigger>
+
+      <AccordionItem
+        value="item-2"
+        className="bg-white shadow-md rounded-2xl p-4 transition-all hover:shadow-lg"
+      >
+        <AccordionTrigger>
+          <p>New Beginnings - McAllen homeowners only</p>
+        </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            We offer worldwide shipping through trusted courier partners.
-            Standard delivery takes 3-5 business days, while express shipping
-            ensures delivery within 1-2 business days.
+            New Beginnings is a home replacement program for 60 years of age (or older) and/or for disabled clients who are currently living in substandard living conditions that are beyond repair. Restricted to households at 80% of the area median income or below.
           </p>
-          <p>
-            All orders are carefully packaged and fully insured. Track your
-            shipment in real-time through our dedicated tracking portal.
-          </p>
-          <Button>
-            Next Steps
-          </Button>
+          <Button>Next Steps</Button>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-3">
-        <AccordionTrigger><p>Programs for Pharr homeowners only</p></AccordionTrigger>
+
+      <AccordionItem
+        value="item-3"
+        className="bg-white shadow-md rounded-2xl p-4 transition-all hover:shadow-lg"
+      >
+        <AccordionTrigger>
+          <p>Programs for Pharr homeowners only</p>
+        </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
           <p>
-            We stand behind our products with a comprehensive 30-day return
-            policy. If you&apos;re not completely satisfied, simply return the
-            item in its original condition.
+            Neighborhood Housing Program is a home rehab/replacement program that is available for Pharr residents that have lived in Pharr at least one year.
           </p>
           <p>
-            Our hassle-free return process includes free return shipping and
-            full refunds processed within 48 hours of receiving the returned
-            item.
+            Applicants must be low or moderate income at the time of application (means total gross earnings equal to or less than 80% of median family income).
           </p>
-          <Button>
-            Next Steps
-          </Button>
+          <p>
+            There are no age restrictions and the property must be current on taxes and with no liens.  The home must also be the primary residence of the homeowner.   
+          </p>
+          <Button>Next Steps</Button>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-4">
-        <AccordionTrigger><p>All Other Programs</p></AccordionTrigger>
+
+      <AccordionItem
+        value="item-4"
+        className="bg-white shadow-md rounded-2xl p-4 transition-all hover:shadow-lg"
+      >
+        <AccordionTrigger>
+          <p>All Other Programs</p>
+
+        </AccordionTrigger>
         <AccordionContent className="flex flex-col gap-4 text-balance">
+
           <p>
-            We stand behind our products with a comprehensive 30-day return
-            policy. If you&apos;re not completely satisfied, simply return the
-            item in its original condition.
+            There are several other rehab programs available to homeowners from Hidalgo County. Contact us 
           </p>
-          <p>
-            Our hassle-free return process includes free return shipping and
-            full refunds processed within 48 hours of receiving the returned
-            item.
-          </p>
-          <Button>
-            Next Steps
-          </Button>
+          <Button>Next Steps</Button>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
