@@ -24,8 +24,6 @@ export default function Contact() {
 
       {/* Contact section */}
       <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col text-center">
-          <h4>CONTACT US</h4>
-          <h2>Reach Out To Our Administration Building</h2>
           <ContactTabs />
       </div>
       
