@@ -8,7 +8,7 @@ export default function MakeAPayment() {
     <div className="bg-[#F5F7FA]">
 
       {/* header section */}
-      <div className="bg-[url(/headers/home-header.png)] bg-cover bg-no-repeat bg-center">
+      <div className="bg-[url(/headers/header5.png)] bg-cover bg-no-repeat bg-center bg-fixed">
       <div className="bg-gradient-to-r from-black/65 to-black/25 bg-blend-overlay">
         <div className="w-[1140px] h-[600px] mx-auto justify-center flex flex-col">
           <h4 className="text-white">MAKE A PAYMENT</h4>
@@ -53,7 +53,7 @@ export default function MakeAPayment() {
             <Button className="w-[200px] py-6 mt-5"  size="lg">Learn More</Button>
        </div>
 
-        <div className="w-1/2 bg-gray-200 rounded-lg"></div>
+        <div className="w-1/2 bg-[url(/images/family2.png)] bg-center bg-cover rounded-lg"></div>
 
     </div>
 
@@ -61,7 +61,7 @@ export default function MakeAPayment() {
 <div className="bg-white">
       <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
 
-        <div className="w-1/2 bg-gray-200 rounded-lg"></div>
+        <div className="w-1/2 bg-[url(/images/family3.png)] bg-center bg-cover rounded-lg"></div>
         <div className="w-1/2">
             <h4>SECURITY TIPS</h4>
             <h2 className="text-base/12">Account Security</h2>

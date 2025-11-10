@@ -9,7 +9,7 @@ export default function Repairs() {
     <div className="bg-[#F5F7FA]">
 
       {/* header section */}
-      <div className="bg-[url(/headers/home-header.png)] bg-cover bg-no-repeat bg-center">
+      <div className="bg-[url(/headers/header4.png)] bg-cover bg-no-repeat bg-center bg-fixed">
       <div className="bg-gradient-to-r from-black/65 to-black/25 bg-blend-overlay">
         <div className="w-[1140px] h-[600px] mx-auto justify-center flex flex-col">
           <h4 className="text-white">HOME REPAIR</h4>
@@ -25,7 +25,7 @@ export default function Repairs() {
 
     {/* subdivisions section */}
       <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
-        <div className="w-1/2 bg-gray-200 rounded-lg"></div>
+        <div className="w-1/2 bg-[url(/images/family4.png)] bg-center bg-cover rounded-lg"></div>
 
         <div className="w-1/2">
             <h4>INCOME-BASED LOCAL PROGRAMS</h4>
