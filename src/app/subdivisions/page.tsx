@@ -9,7 +9,7 @@ export default function Subdivisions() {
     <div className="bg-[#F5F7FA]">
 
       {/* header section */}
-      <div className="bg-[url(/headers/home-header.png)] bg-cover bg-no-repeat bg-center">
+      <div className="bg-[url(/headers/header3.png)] bg-cover bg-no-repeat bg-center bg-fixed">
       <div className="bg-gradient-to-r from-black/65 to-black/25 bg-blend-overlay">
         <div className="w-[1140px] h-[600px] mx-auto justify-center flex flex-col">
           <h4 className="text-white">SUBDIVISIONS</h4>
