@@ -3,6 +3,7 @@ import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
 import { CTASection } from "@/components/cta";
 import Timeline from "@/components/Timeline";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -66,22 +67,53 @@ export default function About() {
             <div className="grid grid-cols-3 gap-10 mt-10 w-full flex flex-row">
 
               <div className="flex w-full flex-col items-center">
-                <div className="bg-primary w-full h-[100px]"></div>
-                <h3>Myra L. Martinez</h3>
-                <p>Executive Vice President/COO</p>
+                <div className="relative w-full h-[400px] bg-[url('/team/bg.png')] bg-cover bg-no-repeat bg-bottom flex justify-center items-bottom overflow-hidden">
+                  <Image
+                    src="/team/test.png"
+                    alt="Test Image"
+                    width={400}
+                    height={500}
+                    className="transform hover:translate-y-[5px] transition-all "
+                  />
+                </div>
+                <div className="text-center">
+                  <h3>Maria Duron</h3>
+                  <p className="text-gray-600">President/CEO</p>
+                </div>
               </div>
 
               <div className="flex w-full flex-col items-center">
-                <div className="bg-primary w-full h-[100px]"></div>
-                <h3>Cynthia Torres</h3>
-                <p>Executive Vice President/CFO</p>
+                <div className="relative w-full h-[400px] bg-[url('/team/bg.png')] bg-cover bg-no-repeat bg-bottom flex justify-center items-bottom overflow-hidden">
+                  <Image
+                    src="/team/test.png"
+                    alt="Test Image"
+                    width={400}
+                    height={500}
+                    className="transform hover:translate-y-[5px] transition-all "
+                  />
+                </div>
+                <div className="text-center">
+                  <h3>Maria Duron</h3>
+                  <p className="text-gray-600">President/CEO</p>
+                </div>
               </div>
 
               <div className="flex w-full flex-col items-center">
-                <div className="bg-primary w-full h-[100px]"></div>
-                <h3>Aidee Castro</h3>
-                <p>Vice President/Director of Lending</p>
+                <div className="relative w-full h-[400px] bg-[url('/team/bg.png')] bg-cover bg-no-repeat bg-bottom flex justify-center items-bottom overflow-hidden">
+                  <Image
+                    src="/team/test.png"
+                    alt="Test Image"
+                    width={400}
+                    height={500}
+                    className="transform hover:translate-y-[5px] transition-all "
+                  />
+                </div>
+                <div className="text-center">
+                  <h3>Maria Duron</h3>
+                  <p className="text-gray-600">President/CEO</p>
+                </div>
               </div>
+
             </div>
           </div>
         </div>

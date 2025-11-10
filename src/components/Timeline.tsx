@@ -72,7 +72,7 @@ export default function Timeline() {
             >
               {/* Animated Card */}
               <motion.div
-                className={`w-5/12 p-6 rounded-xl shadow-lg bg-white border border-gray-200 ${
+                className={`w-5/12 p-6 rounded-xl shadow-md bg-white border border-gray-200 transform hover:translate-y-[-5px] transition-all hover:shadow-lg ${
                   isLeft ? "text-right" : "text-left"
                 }`}
                 initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
@@ -81,7 +81,7 @@ export default function Timeline() {
                 viewport={{ once: true }}
               >
                 <h4 className="text-primary">{item.era}</h4>
-                <h2 className="text-xl font-bold mt-2">{item.title}</h2>
+                <h3>{item.title}</h3>
                 <p className="text-gray-600 mt-2">{item.description}</p>
               </motion.div>
 
