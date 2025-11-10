@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Event() {
 
     return (
-        <div className="w-1/2 bg-white rounded-lg border-2 border-gray-300 text-left flex flex-row">
+        <div className="w-1/2 bg-white rounded-lg border-2 border-gray-300 text-left flex flex-row transform hover:translate-y-[-5px] transition-all hover:shadow-lg">
 
             <div className="border-r-2 border-primary flex flex-col w-1/6  p-5 text-center justify-center">
             <h3 className="text-primary">15</h3>

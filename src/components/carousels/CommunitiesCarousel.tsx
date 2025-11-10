@@ -19,7 +19,7 @@ const items = [
 
 export default function CommunitiesCarousel() {
   return (
-    <div className="w-full py-8 [--swiper-pagination-bullet-inactive-color:#64c6ff!important]">
+    <div className="w-full [--swiper-pagination-bullet-inactive-color:#64c6ff!important]">
       <Swiper
         modules={[Autoplay, Pagination]}
         spaceBetween={20}
@@ -39,7 +39,7 @@ export default function CommunitiesCarousel() {
       >
         {items.map((item, i) => (
           <SwiperSlide key={i}>
-            <div className="w-full border border-gray-300 shadow-md rounded-lg mb-10 text-center bg-cover bg-center" style={{ backgroundImage: `url(${item.backgroundImage})` }}>
+            <div className="w-full border border-gray-300 shadow-md rounded-lg my-10 text-center bg-cover bg-center transform hover:translate-y-[-5px] transition-all hover:shadow-lg" style={{ backgroundImage: `url(${item.backgroundImage})` }}>
                 <div className="bg-black/50 p-5 text-white rounded-lg flex flex-col justify-end h-[350px]">
                     <h4>{item.location}</h4>
                     < hr className="w-1/2 mx-auto pb-1" />
