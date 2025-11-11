@@ -50,7 +50,7 @@ export default function Timeline() {
   });
 
   return (
-    <div ref={ref} className="relative py-20">
+    <div ref={ref} className="relative py-20 px-4 sm:px-6">
       {/* Background Line (glow) */}
       <div className="absolute left-1/2 top-0 transform -translate-x-1/2 h-full w-1 bg-blue-200/50 blur-[1px]"></div>
 
@@ -66,15 +66,19 @@ export default function Timeline() {
           return (
             <div
               key={index}
-              className={`relative flex items-center w-full ${
-                isLeft ? "justify-start" : "justify-end"
-              }`}
+              className={`relative flex w-full items-center
+                ${isLeft ? "justify-start" : "justify-end"}
+                md:flex-row
+                flex-col text-center md:text-left
+              `}
             >
-              {/* Animated Card */}
+              {/* Card */}
               <motion.div
-                className={`w-5/12 p-6 rounded-xl shadow-md bg-white border border-gray-200 transform hover:translate-y-[-5px] transition-shadow hover:shadow-lg ${
-                  isLeft ? "text-right" : "text-left"
-                }`}
+                className={`
+                  w-full md:w-5/12 p-6 rounded-xl shadow-md bg-white border border-gray-200
+                  transform hover:translate-y-[-5px] transition-shadow hover:shadow-lg
+                  ${isLeft ? "md:text-right" : "md:text-left"}
+                `}
                 initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
@@ -85,8 +89,8 @@ export default function Timeline() {
                 <p className="text-gray-600 mt-2">{item.description}</p>
               </motion.div>
 
-              {/* Static Dot */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-primary rounded-full border-4 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
+              {/* Dot (hidden on mobile) */}
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 bg-primary rounded-full border-4 border-white shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
             </div>
           );
         })}

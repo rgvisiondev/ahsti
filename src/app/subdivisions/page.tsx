@@ -11,21 +11,21 @@ export default function Subdivisions() {
       {/* header section */}
       <div className="bg-[url(/headers/header3.png)] bg-cover bg-no-repeat bg-center bg-fixed">
       <div className="bg-gradient-to-r from-black/65 to-black/25 bg-blend-overlay">
-        <div className="w-[1140px] h-[600px] mx-auto justify-center flex flex-col">
+          <div className="max-w-[1140px] w-full h-[600px] mx-auto px-4 flex flex-col justify-center text-center sm:text-left">
           <h4 className="text-white">SUBDIVISIONS</h4>
           <h1 className="text-white">We Build Communities.</h1>
-          <p className="w-2/3 text-white">Each subdivision represents our ongoing commitment to helping families achieve the dream of homeownership in neighborhoods they can be proud of. We’re building hope, opportunity, and lasting connections across South Texas.</p>
-          <div className="flex flex-row gap-3 mt-5">
-            <Button className="w-[200px] py-6"  size="lg">Buy A Home</Button>
-            <Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button>
-          </div>
+          <p className="text-white lg:w-2/3">Each subdivision represents our ongoing commitment to helping families achieve the dream of homeownership in neighborhoods they can be proud of. We’re building hope, opportunity, and lasting connections across South Texas.</p>
+            <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
+              <Button className="w-[200px] py-6"  size="lg">Buy A Home</Button>
+              <Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button>
+            </div>
         </div>
       </div>
       </div>
 
     {/* subdivisions section */}
-      <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
-        <div className="w-full text-center">
+      <div className="max-w-[1140px] w-full py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
+        <div className="w-full text-center px-5 lg:px-0">
             <h4>OUR COMMUNITIES</h4>
             <h2 className="text-base/12">Affordable. Sustainable. Community-Focused.</h2>
             <CommunitiesCarousel />
@@ -40,22 +40,18 @@ export default function Subdivisions() {
     <CTASection />
 
 
-
-
-
-
-      {/* Contact section */}
-      <div className="w-[1140px] py-10 mx-auto justify-center flex flex-col text-center">
-          <h4>CONTACT US</h4>
-          <h2>Reach Out To Our Administration Building</h2>
-
-          <ContactSection />
-
+      {/* Contact Section */}
+      <div className="max-w-[1140px] w-full py-10 px-4 mx-auto flex flex-col text-center">
+        <h4>CONTACT US</h4>
+        <h2 className="mt-2">
+          Reach Out To Our Administration Building
+        </h2>
+        <ContactSection />
       </div>
-      
-      {/* carousel section */}
+
+      {/* Carousel Section */}
       <div className="py-10">
-      <ContinuousCarousel />
+        <ContinuousCarousel />
       </div>
 
 
