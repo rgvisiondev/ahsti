@@ -34,6 +34,21 @@ export default function TestimonialCarousel() {
         speed={2000}
         freeMode={true}
         allowTouchMove={true}
+        breakpoints={{
+    0: {
+      slidesPerView: 1, //  mobile
+    },
+    640: {
+      slidesPerView: 1.5, //  small tablets
+    },
+    768: {
+      slidesPerView: 2, //  tablets
+    },
+    1024: {
+      slidesPerView: 3, //  desktop
+    },
+  }}
+
       >
         {items.map((item, i) => (
           <SwiperSlide key={i}>

@@ -4,9 +4,9 @@ import MapAdmin from "@/components/maps/map-admin";
 export default function ContactSection() {
 
     return (
-          <div className="flex flex-row mt-5 gap-5">
+          <div className="flex flex-col lg:flex-row mt-5 gap-5">
 
-            <div className="flex flex-col w-1/2 text-left">
+            <div className="flex flex-col w-full lg:w-1/2 text-left">
                     <div className="flex flex-col gap-3 pb-5">
                         <div className="flex flow-row gap-3">
                             <Image 
@@ -40,7 +40,7 @@ export default function ContactSection() {
               <MapAdmin />
             </div>
 
-            <div className="bg-white flex w-1/2 border-1 border-gray-300 shadow-md rounded-lg p-5">
+            <div className="bg-white flex w-full lg:w-1/2 border-1 border-gray-300 shadow-md rounded-lg p-5">
               <p>contact form</p>
             </div>
 

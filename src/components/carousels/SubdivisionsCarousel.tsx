@@ -88,7 +88,7 @@ export default function SubdivisionCarousel() {
               }}
             >
               <div className="bg-gradient-to-b from-black/60 to-black/25 bg-blend-overlay">
-                <div className="w-[1140px] h-[600px] mx-auto justify-center flex flex-col text-center">
+                <div className="w-full lg:w-[1140px] h-[600px] mx-auto justify-center flex flex-col text-center">
                   <h4 className="text-white">{item.location}</h4>
                   <h2 className="text-white">{item.name}</h2>
                   <p className="text-white w-2/3 mx-auto">{item.desc}</p>
