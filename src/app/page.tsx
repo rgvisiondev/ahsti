@@ -3,7 +3,7 @@ import ImageAccordion from "@/components/ImageAccordion";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import TestimonialCarousel from "@/components/carousels/TestimonialCarousel";
 import SubdivisionCarousel from "@/components/carousels/SubdivisionsCarousel";
-
+import Link from "next/link";
 import Events from "@/components/Events";
 import Counter from "@/components/counter";
 import ContactSection from "@/components/contactsection";
@@ -27,8 +27,8 @@ export default function Home() {
               affordable loans, and quality neighborhoods.
             </p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
-              <Button className="w-[200px] py-6"  size="lg">Buy A Home</Button>
-              <Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button>
+              <Link href="/buy-a-home"><Button className="w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
+              <Link href="/repairs"><Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
 
           </div>

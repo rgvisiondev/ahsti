@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export function CTASection() {
   return (
@@ -15,12 +16,12 @@ export function CTASection() {
         </div>
 
         <div className="w-full lg:w-1/4 flex flex-row lg:flex-col items-center justify-center gap-5">
-          <Button className="w-[200px] py-6 mt-2" size="lg" variant="secondary">
+          <Link href="/buy-a-home"><Button className="w-[200px] py-6 mt-2" size="lg" variant="secondary">
             Buy A Home
-          </Button>
-          <Button className="w-[200px] py-6 mt-2" size="lg" variant="secondary">
-            View Locations
-          </Button>
+          </Button></Link>
+          <Link href="/subdivisions"><Button className="w-[200px] py-6 mt-2" size="lg" variant="secondary">
+            View Properties
+          </Button></Link>
         </div>
       </div>
     </div>

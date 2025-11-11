@@ -1,6 +1,7 @@
 import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import { ContactTabs } from "@/components/ContactTabs";
+import Link from "next/link";
 
 export default function Contact() {
   return (
@@ -14,15 +15,15 @@ export default function Contact() {
           <h1 className="text-white">We’re Here To Help.</h1>
           <p className="text-white lg:w-2/3">Connect with AHSTI to learn more about our housing programs, get help with your mortgage account, or ask questions about home repair, replacement, or financing options—our team is ready to support you by phone, email, or in person.</p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
-              <Button className="w-[200px] py-6"  size="lg">Buy A Home</Button>
-              <Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button>
+              <Link href="/buy-a-home"><Button className="w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
+              <Link href="/repairs"><Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
         </div>
       </div>
       </div>
 
       {/* Contact section */}
-      <div className="max-w-[1140px] w-full py-10 mx-auto justify-center flex flex-col text-center">
+      <div className="max-w-[1140px] w-full py-10 mx-auto justify-center flex flex-col text-center overflow-x-hidden">
           <ContactTabs />
       </div>
       

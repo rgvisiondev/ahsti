@@ -2,6 +2,8 @@ import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
 import { CTASection } from "@/components/cta";
+import VideoFrame from "@/components/VideoFrame";
+import Link from "next/link";
 
 export default function BuyAHome() {
   return (
@@ -15,8 +17,8 @@ export default function BuyAHome() {
           <h1 className="text-white">Understand Our Programs. </h1>
           <p className="text-white lg:w-2/3">Discover how Affordable Homes of South Texas, Inc. helps hardworking families achieve the dream of homeownership through education, guidance, and affordable, energy-efficient homes.</p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
-              <Button className="w-[200px] py-6"  size="lg">Buy A Home</Button>
-              <Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button>
+              <Link href="/buy-a-home"><Button className="w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
+              <Link href="/repairs"><Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
         </div>
       </div>
@@ -32,14 +34,14 @@ export default function BuyAHome() {
             We don’t just build houses — we build stability, opportunity, and stronger communities.</p>
         </div>
 
-        <div className="w-full lg:w-1/2 bg-gray-200 rounded-lg min-h-[300px]"></div>
+        <div className="w-full lg:w-1/2 rounded-lg"><VideoFrame src="https://player.vimeo.com/video/906513150" /></div>
     </div>
 
     {/* steps section 2 */}
     <div className="w-full bg-white">
       <div className="max-w-[1140px] w-full px-5 py-10 mx-auto justify-center gap-5 flex flex-col-reverse lg:flex-row">
         
-      <div className="w-full lg:w-1/2 bg-gray-200 rounded-lg min-h-[300px]"></div>
+      <div className="w-full lg:w-1/2 rounded-lg"><VideoFrame src="https://player.vimeo.com/video/906512908" /></div>
 
         <div className="w-full lg:w-1/2">
           <h4>WHAT IS AHSTI?</h4>
@@ -59,17 +61,17 @@ export default function BuyAHome() {
           <h2 className="text-base/12">Simple requirements. Real opportunities.</h2>
           <p className="mt-3">AHSTI homeownership programs are designed for working families who meet income and credit guidelines. Eligibility is based on your household size, income level, and financial readiness. We’ll guide you through every step.
             </p>
-            <Button className="mt-5">View Current HUD Income Limits</Button>
+            <Button className="py-6 mt-5" size="lg">View Current HUD Income Limits</Button>
         </div>
 
-        <div className="w-full lg:w-1/2 bg-gray-200 rounded-lg min-h-[300px]"></div>
+        <div className="w-full lg:w-1/2 rounded-lg"><VideoFrame src="https://player.vimeo.com/video/906512930" /></div>
     </div>
 
     {/* steps section 4 */}
     <div className="w-full bg-white">
       <div className="max-w-[1140px] w-full px-5 py-10 mx-auto justify-center gap-5 flex flex-col-reverse lg:flex-row">
 
-      <div className="w-full lg:w-1/2 bg-gray-200 rounded-lg min-h-[300px]"></div>
+      <div className="w-full lg:w-1/2 rounded-lg"><VideoFrame src="https://player.vimeo.com/video/906521238" /></div>
 
         <div className="w-full lg:w-1/2">
           <h4>WHAT KIND OF HOMES DOES AHSTI BUILD?</h4>
