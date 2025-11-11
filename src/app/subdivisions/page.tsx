@@ -3,6 +3,7 @@ import ContinuousCarousel from "@/components/carousels/SliderImages";
 import ContactSection from "@/components/contactsection";
 import { CTASection } from "@/components/cta";
 import CommunitiesCarousel from "@/components/carousels/CommunitiesCarousel";
+import Link from "next/link";
 
 export default function Subdivisions() {
   return (
@@ -16,8 +17,8 @@ export default function Subdivisions() {
           <h1 className="text-white">We Build Communities.</h1>
           <p className="text-white lg:w-2/3">Each subdivision represents our ongoing commitment to helping families achieve the dream of homeownership in neighborhoods they can be proud of. We’re building hope, opportunity, and lasting connections across South Texas.</p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
-              <Button className="w-[200px] py-6"  size="lg">Buy A Home</Button>
-              <Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button>
+              <Link href="/buy-a-home"><Button className="w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
+              <Link href="/repairs"><Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
         </div>
       </div>

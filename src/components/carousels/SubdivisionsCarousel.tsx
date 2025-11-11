@@ -6,55 +6,64 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const items = [
   { 
     name: "Crocket Estates",
     location: "ALAMO, TX", 
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad", 
-    img: "/subdivisions/crockett-estates.png" 
+    img: "/subdivisions/crockett-estates.png",
+    file: "/files/crockett-estates.pdf" 
   },
   { 
     name: "Crown Haven",
     location: "WESLACO, TX", 
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad", 
-    img: "/subdivisions/crown-haven.png" 
+    img: "/subdivisions/crown-haven.png",
+    file: "/files/crown-haven.pdf"
   },
   { 
     name: "Jaguar Heights",
     location: "EDINBURG, TX", 
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad", 
-    img: "/subdivisions/crockett-estates.png" 
+    img: "/subdivisions/crockett-estates.png",
+    file: "/files/jaguar-heights.pdf"
   },
   { 
     name: "Lakewood Estates",
     location: "SAN JUAN, TX", 
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad", 
-    img: "/subdivisions/tiger-crossing.png" 
+    img: "/subdivisions/tiger-crossing.png",
+    file: "/files/lakewood-estates.pdf"
   },
   { 
     name: "Mid Valley Estates",
     location: "WESLACO, TX", 
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad", 
-    img: "/subdivisions/mid-valley-estates.png" 
+    img: "/subdivisions/mid-valley-estates.png",
+    file: "/files/mid-valley-estates.pdf"
   },
   { 
     name: "Speedy Trails",
     location: "MISSION, TX", 
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad", 
-    img: "/subdivisions/speedy-trails.png" 
+    img: "/subdivisions/speedy-trails.png",
+    file: "/files/speedy-trails.pdf"
   },
   { 
     name: "Stonebriar",
     location: "MCALLEN, TX", 
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad", 
-    img: "/subdivisions/crown-haven.png" 
+    img: "/subdivisions/crown-haven.png",
+    file: "/files/stonebriar.pdf"
   },
   { 
     name: "TIGER CROSSING",
     location: "MERCEDES, TX", 
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad", 
-    img: "/subdivisions/tiger-crossing.png" 
+    img: "/subdivisions/tiger-crossing.png",
+    file: "/files/tiger-crossing.pdf"
   },
 ];
 
@@ -93,8 +102,8 @@ export default function SubdivisionCarousel() {
                   <h2 className="text-white">{item.name}</h2>
                   <p className="text-white w-2/3 mx-auto">{item.desc}</p>
                   <div className="flex flex-row gap-3 mx-auto mt-5">
-            <Button className="w-[200px] py-6"  size="lg">Learn More</Button>
-            <Button className="w-[200px] py-6" size="lg" variant="secondary">All Subdivisions</Button>
+            <Link href={item.file} passHref target="_blank" rel="noopener noreferrer"><Button className="w-[200px] py-6"  size="lg">Learn More</Button></Link>
+            <Link href="/subdivisions"><Button className="w-[200px] py-6" size="lg" variant="secondary">All Subdivisions</Button></Link>
                   </div>
                 </div>
               </div>

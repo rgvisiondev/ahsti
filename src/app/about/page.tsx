@@ -4,6 +4,7 @@ import ContactSection from "@/components/contactsection";
 import { CTASection } from "@/components/cta";
 import Timeline from "@/components/Timeline";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -17,8 +18,8 @@ export default function About() {
           <h1 className="text-white">We Build For People.</h1>
           <p className="text-white lg:w-2/3">Affordable Homes of South Texas, Inc. (AHSTI) is a community-based non-profit organization dedicated to enhancing the quality of life by providing affordable housing and related services to eligible families.</p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
-              <Button className="w-[200px] py-6"  size="lg">Buy A Home</Button>
-              <Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button>
+              <Link href="/buy-a-home"><Button className="w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
+              <Link href="/repairs"><Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
         </div>
       </div>
