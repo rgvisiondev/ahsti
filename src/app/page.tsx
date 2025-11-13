@@ -7,6 +7,7 @@ import Link from "next/link";
 import Events from "@/components/Events";
 import Counter from "@/components/counter";
 import ContactSection from "@/components/contactsection";
+import StatsCarousel from "@/components/carousels/StatsCarousel";
 
 export default function Home() {
   return (
@@ -27,8 +28,8 @@ export default function Home() {
               affordable loans, and quality neighborhoods.
             </p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
-              <Link href="/buy-a-home"><Button className="w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
-              <Link href="/repairs"><Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
+              <Link href="/buy-a-home"><Button className="w-[160px] lg:w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
+              <Link href="/repairs"><Button className="w-[160px] lg:w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
 
           </div>
@@ -51,8 +52,12 @@ export default function Home() {
             programs, financial education, and community development initiatives.
           </p>
 
+          <div className="lg:hidden">
+            <StatsCarousel />
+          </div>
+
           {/* Counters */}
-          <div className="flex flex-col sm:flex-row justify-center gap-5 lg:gap-25 py-5">
+          <div className="flex flex-col sm:flex-row justify-center gap-5 lg:gap-25 py-5 hidden lg:flex">
             <div className="flex flex-col items-center">
               <h3 className="text-3xl font-bold">
                 <Counter end={101} />
@@ -124,10 +129,10 @@ export default function Home() {
       <SubdivisionCarousel />
 
       {/* Contact Section */}
-      <div className="max-w-[1140px] w-full py-10 px-4 mx-auto flex flex-col text-center">
-        <h4>CONTACT US</h4>
+      <div className="max-w-[1140px] w-full py-10 px-4 mx-auto flex flex-col text-center -mt-8">
+        <h4>GET STARTED</h4>
         <h2 className="mt-2">
-          Reach Out To Our Administration Building
+          Contact Our Administration Building
         </h2>
         <ContactSection />
       </div>

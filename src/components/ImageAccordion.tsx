@@ -20,17 +20,26 @@ export default function ImageAccordion() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <div className="flex h-[450px] w-full overflow-hidden">
+    <div
+      className="
+        flex w-full overflow-hidden
+        flex-col sm:flex-row
+        h-auto sm:h-[450px]
+      "
+    >
       {images.map((img, index) => (
         <div
           key={index}
-          className={`relative flex-1 transition-all duration-500 ease-in-out ${
-            hoveredIndex === index
-              ? "flex-[4]"
+          className={`
+            relative transition-all duration-500 ease-in-out
+            w-full sm:h-auto h-[250px]
+            ${hoveredIndex === index
+              ? "sm:flex-[4]"
               : hoveredIndex !== null
-              ? "flex-[1]"
-              : "flex-[2]"
-          }`}
+              ? "sm:flex-[1]"
+              : "sm:flex-[2]"
+            }
+          `}
           onMouseEnter={() => setHoveredIndex(index)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -45,10 +54,10 @@ export default function ImageAccordion() {
               hoveredIndex === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <h2 className="text-white text-2xl font-semibold drop-shadow-md text-center">
+            <h3 className="text-white text-2xl font-semibold drop-shadow-md text-center">
               {img.title}
               <p>Learn More →</p>
-            </h2>
+            </h3>
           </div>
         </div>
       ))}

@@ -13,6 +13,13 @@ const navItems = [
   { name: "Contact", link: "/contact" },
 ];
 
+const socials = [
+  { image: "/svg/facebook-white.svg", alt: "facebook", link: "https://www.facebook.com/AffordableHomesSTX/" },
+  { image: "/svg/instagram-white.svg", alt: "instagram", link: "https://www.instagram.com/ahsti/" },
+  { image: "/svg/youtube-white.svg", alt: "youtube", link: "https://www.youtube.com/@myahsti/" },
+  { image: "/svg/linkedin-white.svg", alt: "linkedin", link: "https://www.linkedin.com/company/affordable-homes-of-south-texas-inc-/" },
+];
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -20,8 +27,8 @@ export default function Header() {
     <div>
       {/* Top Bar */}
       <div className="bg-gradient-to-r from-primary to-secondary">
-        <div className="max-w-[1140px] w-full py-2 px-4 mx-auto flex flex-col sm:flex-row text-white justify-between items-center gap-2 sm:gap-0">
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-center">
+        <div className="max-w-[1140px] w-full py-2 px-4 mx-auto flex flex-col-reverse sm:flex-row text-white justify-between items-center gap-2 sm:gap-0">
+          <div className="flex flex-row gap-3 sm:gap-5 items-center">
             <div className="flex flex-row gap-3 items-center">
               <Image src="/svg/phone-white.svg" alt="phone" width={20} height={20} />
               <p className="small-text text-left">956-687-6263</p>
@@ -34,11 +41,13 @@ export default function Header() {
           </div>
 
           <div className="flex flex-row gap-3 mt-2 sm:mt-0">
-            <Image src="/svg/facebook-white.svg" alt="facebook" width={20} height={20} />
-            <Image src="/svg/instagram-white.svg" alt="instagram" width={20} height={20} />
-            <Image src="/svg/youtube-white.svg" alt="youtube" width={20} height={20} />
-            <Image src="/svg/linkedin-white.svg" alt="linkedin" width={20} height={20} />
+            {socials.map((item, i) => (
+              <a key={i} href={item.link} target="_blank" rel="noopener noreferrer">
+                <Image src={item.image} alt={item.alt} width={20} height={20} />
+              </a>
+            ))}
           </div>
+
         </div>
       </div>
 
@@ -91,6 +100,7 @@ export default function Header() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="flex flex-col md:hidden bg-white border-t border-gray-200 px-4 pb-4">
+            <Link href="/" onClick={() => setMenuOpen(false)} className="py-2 text-lg hover:text-primary">Home</Link>
             {navItems.map((item, i) => (
               <Link
                 key={i}
