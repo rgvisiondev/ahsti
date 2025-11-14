@@ -113,7 +113,6 @@ const advisory = [
           </div>
         ))}
       </div>
-
   
   </div>
 </div>
