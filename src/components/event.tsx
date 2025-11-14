@@ -6,12 +6,12 @@ export default function Event() {
     return (
         <div className="w-full lg:w-1/2 bg-white rounded-lg border-2 border-gray-300 text-left flex flex-row transform hover:translate-y-[-5px] transition-all hover:shadow-lg">
 
-            <div className="border-r-2 border-primary flex flex-col w-1/6  p-3 lg:p-5 text-center justify-center">
+            <div className="border-r-2 border-primary flex flex-col w-1/6  p-2 lg:p-5 text-center justify-center">
             <h3 className="text-primary">15</h3>
             <p className="text-gray-400">MAY</p>
             </div>
 
-            <div className="flex flex-col w-5/6 p-3 lg:p-5 gap-3">
+            <div className="flex flex-col w-5/6 p-2 lg:p-5 gap-3">
             <h4>AHSTI Event 1</h4>
             <p>Join us for an evening of networking with business leaders from across the Rio Grande Valley</p>
 
@@ -38,7 +38,7 @@ export default function Event() {
                     </div>
                 </li>
             </ul>
-            <Button className="w-[150px]" size="lg">View Event</Button>
+            <Button className="w-full lg:w-[200px]" size="lg">View Event</Button>
 
             </div>
         

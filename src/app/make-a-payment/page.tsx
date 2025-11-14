@@ -16,8 +16,8 @@ export default function MakeAPayment() {
           <h1 className="text-white">Pay Your Mortgage Online.</h1>
           <p className="text-white">Make secure mortgage payments online through AHSTI’s user-friendly portal, designed to help homeowners manage their loans conveniently and confidently, with step-by-step guidance for first-time users and ongoing support available.</p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
-              <Link href="/buy-a-home"><Button className="w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
-              <Link href="/repairs"><Button className="w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
+              <Link href="/buy-a-home"><Button className="w-[160px] lg:w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
+              <Link href="/repairs"><Button className="w-[160px] lg:w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function MakeAPayment() {
                 <b>4. Make Your Payment</b><br />
                 Once logged in, you’ll be able to make a secure mortgage payment.
             </p>
-            <Button className="w-[200px] py-6 mt-5"  size="lg">Learn More</Button>
+            <Button className="w-full lg:w-[200px] py-6 mt-5"  size="lg">Learn More</Button>
        </div>
 
         <div className="w-full lg:w-1/2 bg-[url(/images/family2.png)] bg-center bg-cover rounded-lg h-[400px] lg:h-auto"></div>
@@ -84,9 +84,9 @@ export default function MakeAPayment() {
 
       {/* Contact Section */}
       <div className="max-w-[1140px] w-full py-10 px-4 mx-auto flex flex-col text-center">
-        <h4>CONTACT US</h4>
+        <h4>GET STARTED</h4>
         <h2 className="mt-2">
-          Reach Out To Our Administration Building
+          Contact Our Administration Building
         </h2>
         <ContactSection />
       </div>
