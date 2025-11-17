@@ -4,14 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const navItems = [
+  { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Subdivisions", link: "/subdivisions" },
-  { name: "Repairs", link: "/repairs" },
-  { name: "Make A Payment", link: "/make-a-payment" },
-  { name: "Contact", link: "/contact" },
+    { name: "Hope Fund Investment", link: "/" },
+  {
+    name: "Services",
+    children: [
+      { name: "Buy A Home", link: "/buy-a-home" },
+      { name: "Repair My Home", link: "/repairs" },
+      { name: "Make A Payment", link: "/make-a-payment" },
+    ],
+  },
 ];
+
 
 const socials = [
   { image: "/svg/facebook-white.svg", alt: "facebook", link: "https://www.facebook.com/AffordableHomesSTX/" },
@@ -19,6 +28,51 @@ const socials = [
   { image: "/svg/youtube-white.svg", alt: "youtube", link: "https://www.youtube.com/@myahsti/" },
   { image: "/svg/linkedin-white.svg", alt: "linkedin", link: "https://www.linkedin.com/company/affordable-homes-of-south-texas-inc-/" },
 ];
+
+// ---------- MOBILE ACCORDION FOR SERVICES ----------
+function MobileAccordion({
+  item,
+  closeMenu,
+}: {
+  item: { name: string; children: { name: string; link: string }[] };
+  closeMenu: () => void;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        className="flex justify-between items-center w-full py-2 text-lg font-normal"
+        onClick={() => setOpen(!open)}
+      >
+        {item.name}
+        <ChevronDown
+          size={20}
+          className={`transition-transform ${open ? "rotate-180" : ""}`}
+        />
+      </button>
+
+      {open && (
+        <div className="mt-1 ml-4 flex flex-col">
+          {item.children.map((child, j) => (
+            <Link
+              key={j}
+              href={child.link}
+              onClick={() => {
+                setOpen(false);
+                closeMenu();   // <-- close main menu too
+              }}
+              className="py-2 text-lg hover:text-primary"
+            >
+              {child.name}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,7 +101,6 @@ export default function Header() {
               </a>
             ))}
           </div>
-
         </div>
       </div>
 
@@ -68,19 +121,39 @@ export default function Header() {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex w-3/5 justify-between">
+          <div className="hidden md:flex w-4/5 justify-between items-center">
             {navItems.map((item, i) => (
-              <Link key={i} href={item.link}>
-                <h5 className="hover:text-primary transition">{item.name}</h5>
-              </Link>
-            ))}
-          </div>
+              <div key={i} className="relative group">
+                {!item.children ? (
+                  <Link href={item.link}>
+                    <h5 className="hover:text-primary transition">{item.name}</h5>
+                  </Link>
+                ) : (
+                  <>
+                    <h5 className="hover:text-primary transition cursor-pointer flex items-center gap-1">
+                      {item.name}
+                      <ChevronDown
+                        size={16}
+                        className="transition-transform group-hover:rotate-180"
+                      />
+                    </h5>
 
-          {/* Buy Button (desktop) */}
-          <div className="hidden md:flex w-1/5">
-            <Link href="/buy-a-home" className="w-full">
-              <Button className="w-full py-6" size="lg">
-                Buy A Home
+                    {/* Dropdown */}
+                    <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-md py-2 w-48 z-20">
+                      {item.children.map((child, j) => (
+                        <Link key={j} href={child.link}>
+                          <p className="px-4 py-2 hover:bg-gray-100">{child.name}</p>
+                        </Link>
+                      ))}
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+
+            <Link href="/contact" className="w-[200px]">
+              <Button className="lg:w-[200px] py-6" size="lg">
+                Contact Us
               </Button>
             </Link>
           </div>
@@ -100,20 +173,26 @@ export default function Header() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="flex flex-col md:hidden bg-white border-t border-gray-200 px-4 pb-4">
-            <Link href="/" onClick={() => setMenuOpen(false)} className="py-2 text-lg hover:text-primary">Home</Link>
+
             {navItems.map((item, i) => (
-              <Link
-                key={i}
-                href={item.link}
-                onClick={() => setMenuOpen(false)}
-                className="py-2 text-lg hover:text-primary"
-              >
-                {item.name}
-              </Link>
+              <div key={i} className="border-b border-gray-100 py-2">
+                {!item.children ? (
+                  <Link
+                    href={item.link}
+                    onClick={() => setMenuOpen(false)}
+                    className="py-2 text-lg hover:text-primary block"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <MobileAccordion item={item} closeMenu={() => setMenuOpen(false)} />
+                )}
+              </div>
             ))}
-            <Link href="/buy-a-home" onClick={() => setMenuOpen(false)}>
+
+            <Link href="/contact" onClick={() => setMenuOpen(false)}>
               <Button className="w-full mt-2 py-6" size="lg">
-                Buy A Home
+                Contact
               </Button>
             </Link>
           </div>

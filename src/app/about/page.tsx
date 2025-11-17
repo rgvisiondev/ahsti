@@ -7,6 +7,40 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function About() {
+
+const leaders = [
+{ name: "Elias Lozano", role: "President" },
+{ name: "Rafael Munguia", role: "Vice President" },
+{ name: "Brent Baldree", role: "Secretary" },
+{ name: "Sergio Melendez", role: "Treasurer" },
+{ name: "Lorena Castillo", role: "Board Member" },
+{ name: "Elodia Flores", role: "Board Member" },
+{ name: "Connie Garza", role: "Board Member" },
+];
+
+const board = [
+{ name: "Elias Lozano", role: "President" },
+{ name: "Rafael Munguia", role: "Vice President" },
+{ name: "Brent Baldree", role: "Secretary" },
+{ name: "Sergio Melendez", role: "Treasurer" },
+{ name: "Lorena Castillo", role: "Board Member" },
+{ name: "Elodia Flores", role: "Board Member" },
+{ name: "Connie Garza", role: "Board Member" },
+{ name: "Gilbert Garza Jr.", role: "Board Member" },
+{ name: "Edna Martinez", role: "Board Member" },
+{ name: "Rose Ovalle", role: "Board Member" },
+{ name: "Piedad Martinez", role: "Board Member" }
+];
+
+
+const advisory = [
+{ name: "Gabrielle Espino"},
+{ name: "Juan Loya"},
+{ name: "Jorge O' Cana"},
+{ name: "Terri Sanchez"},
+{ name: "Karen Valdez"}
+];
+
   return (
     <div className="bg-[#F5F7FA]">
 
@@ -60,48 +94,66 @@ export default function About() {
 
 
     {/* team section */}
-      <div className="max-w-[1140px] w-full pb-10 mx-auto justify-center flex flex-col gap-5 flex flex-col">
-        <div className="w-full text-center">
-          <h4>OUR TEAM</h4>
-          <h2>Meet the Heart of AHSTI</h2>
-          <div className="flex justify-center w-full">
-            <div className="gap-6 mt-10 w-full flex flex-col lg:flex-row ">
+<div className="max-w-[1140px] w-full pb-10 mx-auto text-center">
+  <h4>OUR TEAM</h4>
+  <h2>AHSTI Senior Leadership</h2>
 
-              <div className="flex flex-col items-center px-5 w-full lg:w-1/3 mt-5">
-                <div className="bg-primary h-[325px] w-full flex items-end justify-center">
-                  <Image src="/team/test.png" alt="test" width={350} height={350}/>
-                </div>
-                <div className="text-center">
-                  <h3>Maria Duron</h3>
-                  <p className="text-gray-600">President/CEO</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center px-5 w-full lg:w-1/3 mt-5">
-                <div className="bg-primary h-[325px] w-full flex items-end justify-center">
-                  <Image src="/team/test.png" alt="test" width={350} height={350}/>
-                </div>
-                <div className="text-center">
-                  <h3>Maria Duron</h3>
-                  <p className="text-gray-600">President/CEO</p>
-                </div>
-              </div>
-
-              <div className="flex flex-col items-center px-5 w-full lg:w-1/3 mt-5">
-                <div className="bg-primary h-[325px] w-full flex items-end justify-center">
-                  <Image src="/team/test.png" alt="test" width={350} height={350}/>
-                </div>
-                <div className="text-center">
-                  <h3>Maria Duron</h3>
-                  <p className="text-gray-600">President/CEO</p>
-                </div>
-              </div>
-
+  <div className="flex flex-wrap justify-center mt-5">
+    {/* Team Member */}
+      <div className="flex flex-wrap justify-center">
+        {leaders.map((item, index) => (
+          <div key={index} className="flex flex-col items-center w-full md:w-1/3 px-5 my-10">
+            <div className="bg-primary h-[325px] w-full flex items-end justify-center">
+              <Image src="/team/test.png" alt="test" width={350} height={350} />
+            </div>
+            <div className="text-center mt-3">
+              <h3>{item.name}</h3>
+              <p className="text-gray-600">{item.role}</p>
             </div>
           </div>
-        </div>
+        ))}
+      </div>
+  
+  </div>
+</div>
 
+
+
+
+    {/* board section */}
+<div className="bg-white w-full">
+  <div className="max-w-[1140px] w-full py-10 mx-auto flex flex-col text-center">
+    <h4>FISCAL YEAR 25&apos;</h4>
+    <h2 className="mt-2 mb-6">Board Of Directors</h2>
+    <div className="flex flex-wrap justify-center gap-4">
+      {board.map((item, index) => (
+        <div
+          key={index}
+          className="bg-blue-50 w-44 h-44 gap-2 flex items-center justify-center rounded-lg shadow-md p-5 transform hover:translate-y-[-5px] transition-all hover:shadow-lg flex-col"
+        >
+          <p><strong>{item.name}</strong></p>
+          <p className="small-text">{item.role}</p>
+        </div>
+      ))}
     </div>
+  </div>
+
+  <div className="max-w-[1140px] w-full py-10 mx-auto flex flex-col text-center">
+    <h4>FISCAL YEAR 25&apos;</h4>
+    <h2 className="mt-2 mb-6">Advisory Board</h2>
+    <div className="flex flex-wrap justify-center gap-4">
+      {advisory.map((item, index) => (
+        <div
+          key={index}
+          className="bg-blue-50 w-44 h-44 gap-2 flex items-center justify-center rounded-lg shadow-md p-5  transform hover:translate-y-[-5px] transition-all hover:shadow-lg"
+        >
+          <p><strong>{item.name}</strong></p>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
 
     {/* cta section */}

@@ -6,9 +6,9 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Subdivisions", href: "/subdivisions" },
+    { name: "Buy A Home", href: "/buy-a-home" },
     { name: "Repairs & Support", href: "/repairs" },
     { name: "Make a Payment", href: "/make-a-payment" },
-    { name: "Buy A Home", href: "/buy-a-home" },
     { name: "Contact Us", href: "/contact" },
   ];
 
@@ -70,7 +70,7 @@ export default function Footer() {
           <div className="flex flex-col sm:w-[45%] lg:w-1/5">
             <h4 className="mb-2 font-semibold">Quick Links</h4>
             {links.map((link, index) => (
-              <p key={index} className="small-text">
+              <p key={index} className="small-text hover:underline">
                 <Link href={link.href}>{link.name}</Link>
               </p>
             ))}
@@ -81,7 +81,7 @@ export default function Footer() {
             <h4 className="mb-2 font-semibold">Subdivisions</h4>
             {subdivisions.map((subdivision, index) => (
               <a key={index} href={subdivision.file} target="_blank" rel="noopener noreferrer">
-                <p className="small-text">{subdivision.name}</p>
+                <p className="small-text hover:underline">{subdivision.name}</p>
               </a>
             ))}
           </div>
