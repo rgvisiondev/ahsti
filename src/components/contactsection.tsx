@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MapAdmin from "@/components/maps/map-admin";
+import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
 
@@ -40,8 +41,8 @@ export default function ContactSection() {
               <MapAdmin />
             </div>
 
-            <div className="bg-white flex w-full lg:w-1/2 border-1 border-gray-300 shadow-md rounded-lg p-5">
-              <p>contact form</p>
+            <div className="bg-white flex w-full lg:w-1/2 border-1 border-gray-300 shadow-md rounded-lg p-5 max-h-129">
+              <ContactForm />
             </div>
 
           </div>
