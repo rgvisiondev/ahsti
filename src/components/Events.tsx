@@ -13,15 +13,13 @@ export default function Events() {
         </TabsList>
 
         <TabsContent value="upcoming">
-            <div className="flex flex-col lg:flex-row gap-3 mt-5 mb-3">
-                <Event />
+            <div>
                 <Event />
             </div>
             </TabsContent>
 
         <TabsContent value="previous">
-            <div className="flex flex-col lg:flex-row gap-3 mt-5 mb-3">
-                <Event />
+            <div>
                 <Event />
             </div>
         </TabsContent>
