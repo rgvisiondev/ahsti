@@ -103,7 +103,8 @@ const advisory = [
       <div className="flex flex-wrap justify-center">
         {leaders.map((item, index) => (
           <div key={index} className="flex flex-col items-center w-full md:w-1/3 px-5 my-10">
-            <div className="bg-primary h-[325px] w-full flex items-end justify-center">
+            <div className="bg-primary h-[325px] hover:h-[315px] w-full flex items-end justify-center origin-bottom transition-all duration-300">
+
               <Image src="/team/test.png" alt="test" width={350} height={350} />
             </div>
             <div className="text-center mt-3">
