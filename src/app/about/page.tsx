@@ -123,7 +123,7 @@ const advisory = [
     {/* board section */}
 <div className="bg-white w-full">
   <div className="max-w-[1140px] w-full py-10 mx-auto flex flex-col text-center">
-    <h4>FISCAL YEAR 25'</h4>
+    <h4>FISCAL YEAR 25&apos;</h4>
     <h2 className="mt-2 mb-6">Board Of Directors</h2>
     <div className="flex flex-wrap justify-center gap-4">
       {board.map((item, index) => (
@@ -139,7 +139,7 @@ const advisory = [
   </div>
 
   <div className="max-w-[1140px] w-full py-10 mx-auto flex flex-col text-center">
-    <h4>FISCAL YEAR 25'</h4>
+    <h4>FISCAL YEAR 25&apos;</h4>
     <h2 className="mt-2 mb-6">Advisory Board</h2>
     <div className="flex flex-wrap justify-center gap-4">
       {advisory.map((item, index) => (
