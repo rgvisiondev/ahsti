@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MapAdminCustom from "./maps/map-custom";
+import ContactForm from "./ContactForm";
 
 export default function ContactSectionCustom({ location }: { location: { value: string; label: string; address: string; phone: string; fax: string; mapLocation: string } }) {
     
@@ -45,8 +46,8 @@ export default function ContactSectionCustom({ location }: { location: { value: 
               <MapAdminCustom location={location.mapLocation} />
             </div>
 
-            <div className="bg-white flex w-full lg:w-1/2 border-1 border-gray-300 shadow-md rounded-lg p-5">
-              <p>contact form</p>
+            <div className="bg-white flex w-full lg:w-1/2 border-1 border-gray-300 shadow-md rounded-lg p-5 max-h-129">
+              <ContactForm />
             </div>
 
           </div>
