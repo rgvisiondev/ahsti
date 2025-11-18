@@ -9,13 +9,13 @@ import Link from "next/link";
 export default function About() {
 
 const leaders = [
-{ name: "Elias Lozano", role: "President" },
-{ name: "Rafael Munguia", role: "Vice President" },
-{ name: "Brent Baldree", role: "Secretary" },
-{ name: "Sergio Melendez", role: "Treasurer" },
-{ name: "Lorena Castillo", role: "Board Member" },
-{ name: "Elodia Flores", role: "Board Member" },
-{ name: "Connie Garza", role: "Board Member" },
+{ name: "Myra L. Martinez", role: "Executive Vice President/COO" },
+{ name: "Cynthia Torres", role: "Executive Vice President/CFO" },
+{ name: "Aidee Castro", role: "Vice President/Director of Lending" },
+{ name: "Tony Fernandez", role: "Vice President/Construction Director" },
+{ name: "Rey Jaquez", role: "Vice President/Director of Financial Planning" },
+{ name: "Janie Vela", role: "Vice President/Director of Homebuyer Development" },
+{ name: "Mark Hernandez", role: "Vice President/Director of Administration" },
 ];
 
 const board = [
@@ -53,7 +53,7 @@ const advisory = [
           <p className="text-white lg:w-2/3">Affordable Homes of South Texas, Inc. (AHSTI) is a community-based non-profit organization dedicated to enhancing the quality of life by providing affordable housing and related services to eligible families.</p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
               <Link href="/buy-a-home"><Button className="w-[160px] lg:w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
-              <Link href="/repairs"><Button className="w-[160px] lg:w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
+              <Link href="/repair-my-home"><Button className="w-[160px] lg:w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
         </div>
       </div>
@@ -96,7 +96,7 @@ const advisory = [
     {/* team section */}
 <div className="max-w-[1140px] w-full pb-10 mx-auto text-center">
   <h4>OUR TEAM</h4>
-  <h2>AHSTI Senior Leadership</h2>
+  <h2>AHSTI Leadership</h2>
 
   <div className="flex flex-wrap justify-center mt-5">
     {/* Team Member */}
