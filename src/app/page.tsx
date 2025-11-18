@@ -19,17 +19,17 @@ export default function Home() {
             <h4 className="text-white">
               NONPROFIT • HUD-APPROVED COUNSELING
             </h4>
-            <h1 className="text-white mt-2">
+            <h1 className="text-white">
               Homes. Community. Hope.
             </h1>
-            <p className="text-white mt-4 lg:w-2/3">
+            <p className="text-white lg:w-2/3">
               First-time buyer or longtime resident, we’re here to guide you through
               buying, improving, and sustaining your home — with trusted counseling,
               affordable loans, and quality neighborhoods.
             </p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
               <Link href="/buy-a-home"><Button className="w-[160px] lg:w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
-              <Link href="/repairs"><Button className="w-[160px] lg:w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
+              <Link href="/repair-my-home"><Button className="w-[160px] lg:w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
 
           </div>

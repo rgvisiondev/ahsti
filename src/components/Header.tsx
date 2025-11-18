@@ -10,12 +10,12 @@ const navItems = [
   { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Subdivisions", link: "/subdivisions" },
-    { name: "Hope Fund Investment", link: "/" },
+  { name: "Hope Fund Investment", link: "/" },
   {
     name: "Services",
     children: [
       { name: "Buy A Home", link: "/buy-a-home" },
-      { name: "Repair My Home", link: "/repairs" },
+      { name: "Repair My Home", link: "/repair-my-home" },
       { name: "Make A Payment", link: "/make-a-payment" },
     ],
   },
