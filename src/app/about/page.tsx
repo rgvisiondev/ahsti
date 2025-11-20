@@ -19,26 +19,26 @@ const leaders = [
 ];
 
 const board = [
-{ name: "Elias Lozano", role: "President" },
-{ name: "Rafael Munguia", role: "Vice President" },
-{ name: "Brent Baldree", role: "Secretary" },
-{ name: "Sergio Melendez", role: "Treasurer" },
-{ name: "Lorena Castillo", role: "Board Member" },
-{ name: "Elodia Flores", role: "Board Member" },
-{ name: "Connie Garza", role: "Board Member" },
+{ name: "Brent Baldree", role: "Chair" },
+{ name: "Sergio Melendez", role: "Vice Chair" },
+{ name: "Lorena Castillo", role: "Past Chair" },
+{ name: "Connie Garza", role: "Secretary" },
+{ name: "Edna Martinez", role: "Treasurer" },
+{ name: "Karen Valdez", role: "Board Member" },
+{ name: "Piedad Martinez", role: "Board Member" },
 { name: "Gilbert Garza Jr.", role: "Board Member" },
-{ name: "Edna Martinez", role: "Board Member" },
-{ name: "Rose Ovalle", role: "Board Member" },
-{ name: "Piedad Martinez", role: "Board Member" }
+{ name: "Rafael Mungia", role: "Board Member" },
+{ name: "Rosie Ovalle", role: "Board Member" },
+{ name: "Eliodora (Loli) Flores", role: "Board Member" }
 ];
 
 
 const advisory = [
+{ name: "Jorge O'Cana, Jr."},
+{ name: "Terri Sanchez"},
 { name: "Gabrielle Espino"},
 { name: "Juan Loya"},
-{ name: "Jorge O' Cana"},
-{ name: "Terri Sanchez"},
-{ name: "Karen Valdez"}
+{ name: "Irma Peña"}
 ];
 
   return (
