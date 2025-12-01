@@ -9,13 +9,15 @@ import Link from "next/link";
 export default function About() {
 
 const leaders = [
-{ name: "Myra L. Martinez", role: "Executive Vice President/COO" },
-{ name: "Cynthia Torres", role: "Executive Vice President/CFO" },
-{ name: "Aidee Castro", role: "Vice President/Director of Lending" },
-{ name: "Tony Fernandez", role: "Vice President/Construction Director" },
-{ name: "Rey Jaquez", role: "Vice President/Director of Financial Planning" },
-{ name: "Janie Vela", role: "Vice President/Director of Homebuyer Development" },
-{ name: "Mark Hernandez", role: "Vice President/Director of Administration" },
+{ name: "Myra L. Martinez", role: "Executive Vice President/COO", image: "" },
+{ name: "Cynthia Torres", role: "Executive Vice President/CFO", image: "" },
+{ name: "Aidee Castro", role: "Vice President/Director of Lending", image: "/team/aidee.png" },
+{ name: "Tony Fernandez", role: "Vice President/Construction Director", image: "/team/tony.png" },
+{ name: "Rey Jaquez", role: "Vice President/Director of Financial Planning", image: "" },
+{ name: "Janie Vela", role: "Vice President/Director of Homebuyer Development", image: "/team/janie.png" },
+{ name: "Mark Hernandez", role: "Vice President/Director of Administration", image: "/team/mark.png" },
+{ name: "Xavier Jimenez", role: "Vice President/Director of Real Estate Services", image: "/team/xavier.png"},
+{ name: "Laura Rangel", role: "President & CEO - Hope Insurance Agency, LLC", image: "/team/laura.png"}
 ];
 
 const board = [
@@ -104,8 +106,13 @@ const advisory = [
         {leaders.map((item, index) => (
           <div key={index} className="flex flex-col items-center w-full md:w-1/3 px-5 my-10">
             <div className="bg-primary h-[325px] hover:h-[315px] w-full flex items-end justify-center origin-bottom transition-all duration-300">
-
-              <Image src="/team/test.png" alt="test" width={350} height={350} />
+              {item.image ? (
+                <Image src={item.image} alt={item.name} width={350} height={350} />
+              ) : (
+                <div className="w-[350px] h-[350px] flex items-center justify-center text-white/80">
+                  <Image src="/logos/ahsti-logo-white.png" alt={item.name} width={350} height={350} />
+                </div>
+              )}
             </div>
             <div className="text-center mt-3">
               <h3>{item.name}</h3>
