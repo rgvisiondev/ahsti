@@ -6,7 +6,7 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Subdivisions", href: "/subdivisions" },
-    { name: "Hope Fund Investment", href: "/" },
+    { name: "Hope Fund Investment", href: "https://www.mycnote.com/?code=6AAGh7XZc" },
     { name: "Buy A Home", href: "/buy-a-home" },
     { name: "Repair My Home", href: "/repair-my-home" },
     { name: "Make a Payment", href: "/make-a-payment" },
@@ -48,13 +48,13 @@ export default function Footer() {
           <div className="flex flex-col sm:w-[45%] lg:w-1/5">
             <Link href={"/"}>
             <Image
-              src="/logos/ahsti-logo-white.png"
+              src="/svg-logos/logo2-white.png"
               alt="Affordable Homes of South Texas Logo"
-              width={300}
-              height={100}
-              className="w-[200px] sm:w-[250px] lg:w-[300px] h-auto"
+              width={500}
+              height={500}
+              className="w-[200px] lg:w-full h-auto"
             /></Link>
-            <p className="small-text mt-3">
+            <p className="small-text">
               <i>Building Communities, One Home at a Time.</i>
             </p>
 
@@ -72,7 +72,11 @@ export default function Footer() {
             <h4 className="mb-2 font-semibold">Quick Links</h4>
             {links.map((link, index) => (
               <p key={index} className="small-text hover:underline">
+                {link.href.startsWith("http") ? (
+                  <Link href={link.href} target="_blank" rel="noopener noreferrer">{link.name}</Link>
+                ) : (
                 <Link href={link.href}>{link.name}</Link>
+                )}
               </p>
             ))}
           </div>
