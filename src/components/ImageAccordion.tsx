@@ -36,8 +36,8 @@ export default function ImageAccordion() {
             ${hoveredIndex === index
               ? "sm:flex-[4]"
               : hoveredIndex !== null
-              ? "sm:flex-[1]"
-              : "sm:flex-[2]"
+                ? "sm:flex-[1]"
+                : "sm:flex-[2]"
             }
           `}
           onMouseEnter={() => setHoveredIndex(index)}
@@ -50,9 +50,8 @@ export default function ImageAccordion() {
             className="object-cover transition-transform duration-500 ease-in-out"
           />
           <div
-            className={`absolute inset-0 bg-black/40 transition-opacity duration-500 flex items-end justify-center pb-10 ${
-              hoveredIndex === index ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 bg-black/40 transition-opacity duration-500 flex items-end justify-center pb-10 ${hoveredIndex === index ? "opacity-100" : "opacity-0"
+              }`}
           >
             <h3 className="text-white text-2xl font-semibold drop-shadow-md text-center">
               {img.title}

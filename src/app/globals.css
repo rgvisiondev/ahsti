@@ -9,31 +9,36 @@
 /* Typography */
 h1 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 700; /* bold */
+  font-weight: 700;
+  /* bold */
   font-size: 50px;
 }
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600; /* semibold */
+  font-weight: 600;
+  /* semibold */
   font-size: 40px;
 }
 
 h3 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 500; /* medium */
+  font-weight: 500;
+  /* medium */
   font-size: 35px;
 }
 
 h4 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 600; /* semibold */
+  font-weight: 600;
+  /* semibold */
   font-size: 22px;
 }
 
 h5 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 500; /* semibold */
+  font-weight: 500;
+  /* semibold */
   font-size: 18px;
 }
 
@@ -58,7 +63,8 @@ h5 {
 
 p {
   font-family: 'Merriweather', serif;
-  font-weight: 400; /* regular */
+  font-weight: 400;
+  /* regular */
   font-size: 18px;
 }
 
@@ -68,12 +74,14 @@ p.small-text {
 
 li {
   font-family: 'Merriweather', serif;
-  font-weight: 400; /* regular */
+  font-weight: 400;
+  /* regular */
   font-size: 18px;
 }
 
 .swiper-pagination-bullet {
-  opacity: 0.6 !important; /* makes inactive bullets fully visible */
+  opacity: 0.6 !important;
+  /* makes inactive bullets fully visible */
 }
 
 
@@ -132,7 +140,7 @@ li {
   --popover-foreground: oklch(0.145 0 0);
   --primary: #007DC3;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary:#4daae8;
+  --secondary: #4daae8;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -198,6 +206,7 @@ li {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

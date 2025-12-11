@@ -7,10 +7,9 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const navItems = [
-  { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Subdivisions", link: "/subdivisions" },
-  { name: "Hope Fund Investment", link: "/" },
+  { name: "Hope Fund Investment", link: "https://www.mycnote.com/?code=6AAGh7XZc" },
   {
     name: "Services",
     children: [
@@ -111,10 +110,10 @@ export default function Header() {
           <div className="flex w-auto sm:w-1/5">
             <Link href="/">
               <Image
-                src="/logos/ahsti-logo.png"
+                src="/svg-logos/logo.png"
                 alt="Affordable Homes of South Texas Logo"
-                width={200}
-                height={80}
+                width={500}
+                height={500}
                 className="h-auto w-[160px] sm:w-[200px] md:w-[300px]"
               />
             </Link>
@@ -125,9 +124,15 @@ export default function Header() {
             {navItems.map((item, i) => (
               <div key={i} className="relative group">
                 {!item.children ? (
-                  <Link href={item.link}>
-                    <h5 className="hover:text-primary transition">{item.name}</h5>
-                  </Link>
+                  item.link.startsWith("http") ? (
+                    <Link href={item.link} target="_blank" rel="noopener noreferrer">
+                      <h5 className="hover:text-primary transition">{item.name}</h5>
+                    </Link>
+                  ) : (
+                    <Link href={item.link}>
+                      <h5 className="hover:text-primary transition">{item.name}</h5>
+                    </Link>
+                  )
                 ) : (
                   <>
                     <h5 className="hover:text-primary transition cursor-pointer flex items-center gap-1">
@@ -173,6 +178,12 @@ export default function Header() {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="flex flex-col md:hidden bg-white border-t border-gray-200 px-4 pb-4">
+
+            <Link
+              href="/"
+              onClick={() => setMenuOpen(false)}
+              className="py-2 text-lg hover:text-primary"
+            >Home</Link>
 
             {navItems.map((item, i) => (
               <div key={i} className="border-b border-gray-100 py-2">

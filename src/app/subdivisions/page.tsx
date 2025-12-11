@@ -11,34 +11,34 @@ export default function Subdivisions() {
 
       {/* header section */}
       <div className="bg-[url(/headers/header3.png)] bg-cover bg-no-repeat bg-center bg-fixed">
-      <div className="bg-gradient-to-r from-black/65 to-black/25 bg-blend-overlay">
+        <div className="bg-gradient-to-r from-black/65 to-black/25 bg-blend-overlay">
           <div className="max-w-[1140px] w-full h-[600px] mx-auto px-4 flex flex-col justify-center text-center sm:text-left">
-          <h4 className="text-white">SUBDIVISIONS</h4>
-          <h1 className="text-white">We Build Communities</h1>
-          <p className="text-white lg:w-2/3">Each subdivision represents our ongoing commitment to helping families achieve the dream of homeownership in neighborhoods they can be proud of. We’re building hope, opportunity, and lasting connections across South Texas.</p>
+            <h4 className="text-white">SUBDIVISIONS</h4>
+            <h1 className="text-white">We Build Communities</h1>
+            <p className="text-white lg:w-2/3">Each subdivision represents our ongoing commitment to helping families achieve the dream of homeownership in neighborhoods they can be proud of. We’re building hope, opportunity, and lasting connections across South Texas.</p>
             <div className="flex flex-row gap-3 justify-center sm:justify-start mt-5">
-              <Link href="/buy-a-home"><Button className="w-[160px] lg:w-[200px] py-6"  size="lg">Buy A Home</Button></Link>
+              <Link href="/buy-a-home"><Button className="w-[160px] lg:w-[200px] py-6" size="lg">Buy A Home</Button></Link>
               <Link href="/repair-my-home"><Button className="w-[160px] lg:w-[200px] py-6" size="lg" variant="secondary">Repair My Home</Button></Link>
             </div>
+          </div>
         </div>
       </div>
-      </div>
 
-    {/* subdivisions section */}
+      {/* subdivisions section */}
       <div className="max-w-[1140px] w-full py-10 mx-auto justify-center flex flex-col gap-5 flex flex-row">
         <div className="w-full text-center px-5 lg:px-0">
-            <h4>OUR COMMUNITIES</h4>
-            <h2 className="text-base/12">Affordable. Sustainable. Community-Focused.</h2>
-            <CommunitiesCarousel />
-            
-       </div>
+          <h4>OUR COMMUNITIES</h4>
+          <h2 className="text-base/12">Affordable. Sustainable. Community-Focused.</h2>
+          <CommunitiesCarousel />
+
+        </div>
 
 
-    </div>
+      </div>
 
 
-    {/* cta section */}
-    <CTASection />
+      {/* cta section */}
+      <CTASection />
 
 
       {/* Contact Section */}

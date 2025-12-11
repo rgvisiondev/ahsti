@@ -27,37 +27,37 @@ export default function StatsCarousel() {
         allowTouchMove={true}
       >
 
-          <SwiperSlide className="pb-10">
-            <div className="flex flex-col items-center">
-              <h3 className="text-3xl font-bold">
-                <Counter end={101} />
-              </h3>
-              <p className="text-sm text-center">Homes <br /> Built</p>
-            </div>
-          </SwiperSlide>
+        <SwiperSlide className="pb-10">
+          <div className="flex flex-col items-center">
+            <h3 className="text-3xl font-bold">
+              <Counter end={101} />
+            </h3>
+            <p className="text-sm text-center">Homes <br /> Built</p>
+          </div>
+        </SwiperSlide>
 
-          <SwiperSlide className="pb-10">
-            <div className="flex flex-col items-center">
-              <div className="flex flex-row items-center justify-center">
-                <h3 className="text-3xl font-bold">
-                  <Counter prefix="$" end={10} />
-                </h3>
-                <h3 className="text-3xl font-bold">
-                  <Counter prefix="." end={5} suffix="M" />
-                </h3>
-              </div>
-              <p className="text-sm text-center">Loans <br /> Originated</p>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide className="pb-10">
-            <div className="flex flex-col items-center">
+        <SwiperSlide className="pb-10">
+          <div className="flex flex-col items-center">
+            <div className="flex flex-row items-center justify-center">
               <h3 className="text-3xl font-bold">
-                <Counter end={351} />
+                <Counter prefix="$" end={10} />
               </h3>
-              <p className="text-sm text-center">Counseling <br /> Clients</p>
+              <h3 className="text-3xl font-bold">
+                <Counter prefix="." end={5} suffix="M" />
+              </h3>
             </div>
-          </SwiperSlide>
+            <p className="text-sm text-center">Loans <br /> Originated</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide className="pb-10">
+          <div className="flex flex-col items-center">
+            <h3 className="text-3xl font-bold">
+              <Counter end={351} />
+            </h3>
+            <p className="text-sm text-center">Counseling <br /> Clients</p>
+          </div>
+        </SwiperSlide>
 
 
       </Swiper>
