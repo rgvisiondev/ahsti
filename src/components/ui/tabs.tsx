@@ -67,11 +67,11 @@ function TabsTrigger({
       className={cn(
         "inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 rounded-md border border-transparent px-2 py-1 text-md font-medium whitespace-nowrap transition-[color,box-shadow] focus-visible:ring-[3px] focus-visible:outline-1 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:shadow-sm [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
         variant === "default" &&
-          "text-foreground dark:text-muted-foreground data-[state=active]:bg-background dark:data-[state=active]:text-foreground data-[state=active]:text-foreground hover:text-primary hover:cursor-pointer",
+        "text-foreground dark:text-muted-foreground data-[state=active]:bg-background dark:data-[state=active]:text-foreground data-[state=active]:text-foreground hover:text-primary hover:cursor-pointer",
         variant === "blue" &&
-          "text-black data-[state=active]:bg-primary data-[state=active]:text-white p-5 hover:text-primary hover:cursor-pointer",
+        "text-black data-[state=active]:bg-primary data-[state=active]:text-white p-5 hover:text-primary hover:cursor-pointer",
         variant === "pills" &&
-          "rounded-full data-[state=active]:bg-background data-[state=active]:text-foreground",
+        "rounded-full data-[state=active]:bg-background data-[state=active]:text-foreground",
         className
       )}
       {...props}

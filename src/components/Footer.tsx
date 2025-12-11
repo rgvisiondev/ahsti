@@ -14,14 +14,14 @@ export default function Footer() {
   ];
 
   const subdivisions = [
-    { name: "Crockett Estates", file:"/files/crockett-estates.pdf" },
-    { name: "Crown Haven", file:"/files/crown-haven.pdf" },
-    { name: "Jaguar Heights", file:"/files/jaguar-heights.pdf" },
-    { name: "Lakewood Estates", file:"/files/lakewood-estates.pdf" },
-    { name: "Mid Valley Estates", file:"/files/mid-valley=estates.pdf" },
-    { name: "Speedy Trails", file:"/files/speedy-trails.pdf" },
-    { name: "Stonebriar", file:"/files/stonebriar.pdf" },
-    { name: "Tiger Crossing", file:"/files/tiger-crossing.pdf" },
+    { name: "Crockett Estates", file: "/files/crockett-estates.pdf" },
+    { name: "Crown Haven", file: "/files/crown-haven.pdf" },
+    { name: "Jaguar Heights", file: "/files/jaguar-heights.pdf" },
+    { name: "Lakewood Estates", file: "/files/lakewood-estates.pdf" },
+    { name: "Mid Valley Estates", file: "/files/mid-valley=estates.pdf" },
+    { name: "Speedy Trails", file: "/files/speedy-trails.pdf" },
+    { name: "Stonebriar", file: "/files/stonebriar.pdf" },
+    { name: "Tiger Crossing", file: "/files/tiger-crossing.pdf" },
   ];
 
   const locations = [
@@ -33,11 +33,11 @@ export default function Footer() {
   ];
 
   const socials = [
-  { image: "/svg/facebook-white.svg", alt: "facebook", link: "https://www.facebook.com/AffordableHomesSTX/" },
-  { image: "/svg/instagram-white.svg", alt: "instagram", link: "https://www.instagram.com/ahsti/" },
-  { image: "/svg/youtube-white.svg", alt: "youtube", link: "https://www.youtube.com/@myahsti/" },
-  { image: "/svg/linkedin-white.svg", alt: "linkedin", link: "https://www.linkedin.com/company/affordable-homes-of-south-texas-inc-/" },
-];
+    { image: "/svg/facebook-white.svg", alt: "facebook", link: "https://www.facebook.com/AffordableHomesSTX/" },
+    { image: "/svg/instagram-white.svg", alt: "instagram", link: "https://www.instagram.com/ahsti/" },
+    { image: "/svg/youtube-white.svg", alt: "youtube", link: "https://www.youtube.com/@myahsti/" },
+    { image: "/svg/linkedin-white.svg", alt: "linkedin", link: "https://www.linkedin.com/company/affordable-homes-of-south-texas-inc-/" },
+  ];
 
   return (
     <div className="bg-gradient-to-r from-primary to-secondary">
@@ -47,23 +47,23 @@ export default function Footer() {
           {/* Logo + Social */}
           <div className="flex flex-col sm:w-[45%] lg:w-1/5">
             <Link href={"/"}>
-            <Image
-              src="/svg-logos/logo2-white.png"
-              alt="Affordable Homes of South Texas Logo"
-              width={500}
-              height={500}
-              className="w-[200px] lg:w-full h-auto"
-            /></Link>
+              <Image
+                src="/svg-logos/logo2-white.png"
+                alt="Affordable Homes of South Texas Logo"
+                width={500}
+                height={500}
+                className="w-[200px] lg:w-full h-auto"
+              /></Link>
             <p className="small-text">
               <i>Building Communities, One Home at a Time.</i>
             </p>
 
             <div className="flex flex-row gap-3 mt-5">
-           {socials.map((item, i) => (
-              <a key={i} href={item.link} target="_blank" rel="noopener noreferrer">
-                <Image src={item.image} alt={item.alt} width={20} height={20} />
-              </a>
-            ))}
+              {socials.map((item, i) => (
+                <a key={i} href={item.link} target="_blank" rel="noopener noreferrer">
+                  <Image src={item.image} alt={item.alt} width={20} height={20} />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -75,7 +75,7 @@ export default function Footer() {
                 {link.href.startsWith("http") ? (
                   <Link href={link.href} target="_blank" rel="noopener noreferrer">{link.name}</Link>
                 ) : (
-                <Link href={link.href}>{link.name}</Link>
+                  <Link href={link.href}>{link.name}</Link>
                 )}
               </p>
             ))}

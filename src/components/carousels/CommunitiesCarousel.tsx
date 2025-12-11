@@ -38,30 +38,30 @@ export default function CommunitiesCarousel() {
         freeMode={true}
         allowTouchMove={true}
         breakpoints={{
-    0: {
-      slidesPerView: 1, //  mobile
-    },
-    640: {
-      slidesPerView: 1.5, //  small tablets
-    },
-    768: {
-      slidesPerView: 2, //  tablets
-    },
-    1024: {
-      slidesPerView: 3, //  desktop
-    },
-  }}
+          0: {
+            slidesPerView: 1, //  mobile
+          },
+          640: {
+            slidesPerView: 1.5, //  small tablets
+          },
+          768: {
+            slidesPerView: 2, //  tablets
+          },
+          1024: {
+            slidesPerView: 3, //  desktop
+          },
+        }}
       >
         {items.map((item, i) => (
           <SwiperSlide key={i}>
             <Link href={item.file} target="_blank" rel="noopener noreferrer">
-            <div className="w-full border border-gray-300 shadow-md rounded-lg my-10 text-center bg-cover bg-center transform hover:translate-y-[-5px] transition-all hover:shadow-lg" style={{ backgroundImage: `url(${item.backgroundImage})` }}>
+              <div className="w-full border border-gray-300 shadow-md rounded-lg my-10 text-center bg-cover bg-center transform hover:translate-y-[-5px] transition-all hover:shadow-lg" style={{ backgroundImage: `url(${item.backgroundImage})` }}>
                 <div className="bg-black/50 p-5 text-white rounded-lg flex flex-col justify-end h-[350px]">
-                    <h4>{item.location}</h4>
-                    < hr className="w-1/2 mx-auto pb-1" />
-                    <Image src={item.logo} alt={`${item.location} logo`} width={200} height={100} className="mx-auto" />
+                  <h4>{item.location}</h4>
+                  < hr className="w-1/2 mx-auto pb-1" />
+                  <Image src={item.logo} alt={`${item.location} logo`} width={200} height={100} className="mx-auto" />
                 </div>
-            </div>
+              </div>
             </Link>
           </SwiperSlide>
         ))}

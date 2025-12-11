@@ -34,19 +34,19 @@ export default function TestimonialCarousel() {
         freeMode={true}
         allowTouchMove={true}
         breakpoints={{
-    0: {
-      slidesPerView: 1, //  mobile
-    },
-    640: {
-      slidesPerView: 1.5, //  small tablets
-    },
-    768: {
-      slidesPerView: 2, //  tablets
-    },
-    1024: {
-      slidesPerView: 3, //  desktop
-    },
-  }}
+          0: {
+            slidesPerView: 1, //  mobile
+          },
+          640: {
+            slidesPerView: 1.5, //  small tablets
+          },
+          768: {
+            slidesPerView: 2, //  tablets
+          },
+          1024: {
+            slidesPerView: 3, //  desktop
+          },
+        }}
 
       >
         {items.map((item, i) => (
@@ -54,14 +54,14 @@ export default function TestimonialCarousel() {
             <div className="bg-white w-full border-1 border-gray-300 shadow-md rounded-lg p-5 mb-10 text-left transform hover:translate-y-[-5px] transition-all hover:shadow-lg">
               <div className="flex flex-row gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
-                <Image
-                  key={i}
-                  src="/svg/star.svg"
-                  alt="star"
-                  width={20}
-                  height={20}
-                />
-              ))}
+                  <Image
+                    key={i}
+                    src="/svg/star.svg"
+                    alt="star"
+                    width={20}
+                    height={20}
+                  />
+                ))}
               </div>
               <p className="py-3">{item.quote}</p>
               <h4>{item.name}</h4>
