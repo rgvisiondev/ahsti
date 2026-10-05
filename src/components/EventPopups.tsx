@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
@@ -8,13 +7,33 @@ const fiveKUrl = "https://runsignup.com/Race/TX/Mcallen/CosmicGlow5KRunWalk";
 const flyerUrl = "/files/popups/Fall-Event-Flyer.png";
 const flyerDismissedKey = "ahsti-fall-event-flyer-dismissed";
 
-export default function EventPopups() {
+type EventPopupsProps = {
+  enableFiveK?: boolean;
+  enableFlyer?: boolean;
+};
+
+export default function EventPopups({
+  enableFiveK = true,
+  enableFlyer = false, //disable flyer
+}: EventPopupsProps) {
+  const [showFiveK, setShowFiveK] = useState(enableFiveK);
   const [showFlyer, setShowFlyer] = useState(false);
-  const [showFiveK, setShowFiveK] = useState(true);
 
   useEffect(() => {
-    setShowFlyer(window.sessionStorage.getItem(flyerDismissedKey) !== "true");
-  }, []);
+    setShowFiveK(enableFiveK);
+  }, [enableFiveK]);
+
+  useEffect(() => {
+    if (!enableFlyer) {
+      setShowFlyer(false);
+      return;
+    }
+
+    const dismissed =
+      window.sessionStorage.getItem(flyerDismissedKey) === "true";
+
+    setShowFlyer(!dismissed);
+  }, [enableFlyer]);
 
   function closeFlyer() {
     window.sessionStorage.setItem(flyerDismissedKey, "true");
@@ -23,7 +42,7 @@ export default function EventPopups() {
 
   return (
     <>
-      {showFiveK && (
+      {enableFiveK && showFiveK && (
         <aside className="fixed bottom-4 right-4 z-40 w-[min(330px,calc(100vw-2rem))] rounded-lg border-2 border-[#E7212B] bg-white p-4 shadow-2xl">
           <button
             type="button"
@@ -33,9 +52,19 @@ export default function EventPopups() {
           >
             <X size={18} />
           </button>
-          <p className="pr-6 text-xs font-semibold uppercase tracking-[0.18em] text-[#E7212B]">Now live</p>
-          <h2 className="mt-1 pr-5 text-xl font-bold text-[#00345B]">Cosmic Glow 5K Run/Walk</h2>
-          <p className="mt-1 text-sm text-slate-700">Registration is open for AHSTI&apos;s 5K run and walk.</p>
+
+          <p className="pr-6 text-xs font-semibold uppercase tracking-[0.18em] text-[#E7212B]">
+            Now live
+          </p>
+
+          <h2 className="mt-1 pr-5 text-xl font-bold text-[#00345B]">
+            Cosmic Glow 5K Run/Walk
+          </h2>
+
+          <p className="mt-1 text-sm text-slate-700">
+            Registration is open for AHSTI&apos;s 5K run and walk.
+          </p>
+
           <a
             href={fiveKUrl}
             target="_blank"
@@ -47,18 +76,26 @@ export default function EventPopups() {
         </aside>
       )}
 
-      {showFlyer && (
+      {enableFlyer && showFlyer && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/75 p-4"
           role="dialog"
           aria-modal="true"
           aria-labelledby="homeownership-event-title"
           onMouseDown={(event) => {
-            if (event.target === event.currentTarget) closeFlyer();
+            if (event.target === event.currentTarget) {
+              closeFlyer();
+            }
           }}
         >
           <div className="relative max-h-[calc(100vh-2rem)] w-full max-w-[720px] overflow-auto rounded-lg bg-white shadow-2xl">
-            <h2 id="homeownership-event-title" className="sr-only">Homeownership Event flyer</h2>
+            <h2
+              id="homeownership-event-title"
+              className="sr-only"
+            >
+              Homeownership Event flyer
+            </h2>
+
             <button
               type="button"
               onClick={closeFlyer}
@@ -67,13 +104,11 @@ export default function EventPopups() {
             >
               <X size={22} />
             </button>
-            <Image
+
+            <img
               src={flyerUrl}
               alt="Homeownership Event flyer with event dates, locations, and free credit pulls"
-              width={1080}
-              height={1350}
               className="h-auto w-full"
-              priority
             />
           </div>
         </div>
