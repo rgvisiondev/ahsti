@@ -1,9 +1,15 @@
 import { Button } from "../../components/ui/button";
 import ContinuousCarousel from "@/components/carousels/SliderImages";
-import ContactSection from "@/components/contactsection";
 import Link from "next/link";
 import { Metadata } from "next";
-import { BriefcaseBusiness, GraduationCap, HeartHandshake, RotateCcw, ShieldCheck, UsersRound } from "lucide-react";
+import {
+  BriefcaseBusiness,
+  GraduationCap,
+  HeartHandshake,
+  RotateCcw,
+  ShieldCheck,
+  UsersRound,
+} from "lucide-react";
 
 export const metadata: Metadata = {
   title: "HERBuilt® | AHSTI",
@@ -16,13 +22,15 @@ export default function HerBuilt() {
     <div className="bg-[#F5F7FA]">
 
       {/* Hero Section */}
-      <div className="bg-[url(/images/6F4A1832.jpg)] bg-cover bg-[700px] md:bg-center ">
+      <div className="bg-[url(/images/6F4A1832.jpg)] bg-cover bg-[700px] md:bg-center bg-fixed">
         <div className="bg-gradient-to-r from-black/70 via-black/45 to-black/20">
-          <div className="max-w-[1140px] w-full min-h-[600px] mx-auto px-5 lg:px-0 flex flex-col justify-center  py-10">
+          <div className="max-w-[1140px] w-full min-h-[600px] mx-auto px-5 lg:px-0 flex flex-col justify-center py-15">
+
+            {/* HERBuilt Logo */}
             <img
               src="/logos/HERBuilt_logo_color.png"
               alt="HERBuilt"
-              className="w-[140px] md:w-[120px] mb-8"
+              className="w-[220px] md:w-[200px] mb-8"
             />
 
             <h4 className="text-white">
@@ -63,7 +71,10 @@ export default function HerBuilt() {
       </div>
 
       {/* The Challenge */}
-      <div id="about" className="max-w-[1140px] w-full px-5 lg:px-0 py-16 mx-auto">
+      <div
+        id="about"
+        className="max-w-[1140px] w-full px-5 lg:px-0 py-16 mx-auto"
+      >
         <div className="flex flex-col lg:flex-row gap-10 items-center">
 
           <div className="w-full lg:w-1/2">
@@ -113,11 +124,13 @@ export default function HerBuilt() {
             </p>
           </div>
 
+          {/* Core Elements */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
 
             {/* Paid Apprenticeships */}
             <div className="bg-white rounded-lg p-8">
-            <GraduationCap className="w-10 h-10 text-[#078DCE] mb-3" />
+              <GraduationCap className="w-10 h-10 text-[#078DCE] mb-3" />
+
               <h4 className="text-xl font-bold">
                 Paid Apprenticeships
               </h4>
@@ -130,7 +143,8 @@ export default function HerBuilt() {
 
             {/* Wraparound Supports */}
             <div className="bg-white rounded-lg p-8">
-                <HeartHandshake className="w-10 h-10 text-[#078DCE] mb-3" />
+              <HeartHandshake className="w-10 h-10 text-[#078DCE] mb-3" />
+
               <h4 className="text-xl font-bold">
                 Wraparound Supports
               </h4>
@@ -144,7 +158,8 @@ export default function HerBuilt() {
 
             {/* Safe Sites */}
             <div className="bg-white rounded-lg p-8">
-                <ShieldCheck className="w-10 h-10 text-[#078DCE] mb-3" />
+              <ShieldCheck className="w-10 h-10 text-[#078DCE] mb-3" />
+
               <h4 className="text-xl font-bold">
                 HERBuilt® Safe-Sites Certification
               </h4>
@@ -153,6 +168,36 @@ export default function HerBuilt() {
                 An enforceable standard requiring subcontractors to adopt
                 safety, respect, and accountability practices as a condition
                 of participating in the program.
+              </p>
+            </div>
+
+          </div>
+
+          {/* Safe Sites Certification */}
+          <div className="mt-12 bg-white rounded-lg p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+
+            <div className="flex-shrink-0">
+              <img
+                src="/logos/HERBuilt_SafeSite_Seal.png"
+                alt="HERBuilt® Safe Sites Certification"
+                className="w-[180px] h-[180px] md:w-[210px] md:h-[210px] object-contain"
+              />
+            </div>
+
+            <div className="text-center md:text-left">
+              <h4 className="text-[#078DCE]">
+                HERBUILT® SAFE-SITES CERTIFICATION
+              </h4>
+
+              <h3 className="text-2xl md:text-3xl font-bold mt-2">
+                A Higher Standard for Construction Job Sites
+              </h3>
+
+              <p className="mt-4 max-w-[700px]">
+                The HERBuilt® Safe-Sites Certification establishes an
+                enforceable standard for participating subcontractors,
+                requiring safety, respect, and accountability practices that
+                help create job sites where women can succeed.
               </p>
             </div>
 
@@ -212,8 +257,10 @@ export default function HerBuilt() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
 
+          {/* Women Seeking Careers */}
           <div className="bg-white rounded-lg p-8 shadow-sm">
             <BriefcaseBusiness className="w-10 h-10 text-[#078DCE] mb-3" />
+
             <h4 className="text-xl font-bold">
               Women Seeking Careers
             </h4>
@@ -224,8 +271,10 @@ export default function HerBuilt() {
             </p>
           </div>
 
+          {/* Women Reentering the Workforce */}
           <div className="bg-white rounded-lg p-8 shadow-sm">
             <RotateCcw className="w-10 h-10 text-[#078DCE] mb-3" />
+
             <h4 className="text-xl font-bold">
               Women Reentering the Workforce
             </h4>
@@ -236,8 +285,10 @@ export default function HerBuilt() {
             </p>
           </div>
 
+          {/* First-Generation Trades Workers */}
           <div className="bg-white rounded-lg p-8 shadow-sm">
             <UsersRound className="w-10 h-10 text-[#078DCE] mb-3" />
+
             <h4 className="text-xl font-bold">
               First-Generation Trades Workers
             </h4>
@@ -282,39 +333,48 @@ export default function HerBuilt() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-12">
 
+            {/* Planning */}
             <div className="text-center p-8 rounded-lg bg-[#F5F7FA]">
               <div className="text-[#078DCE] font-bold text-3xl">
                 2026
               </div>
+
               <h3 className="mt-3 text-xl font-bold">
                 Planning &amp; Partnerships
               </h3>
+
               <p className="mt-3">
                 Building relationships with subcontractors, training providers,
                 and workforce organizations.
               </p>
             </div>
 
+            {/* Pilot */}
             <div className="text-center p-8 rounded-lg bg-[#F5F7FA]">
               <div className="text-[#078DCE] font-bold text-3xl">
                 Early 2027
               </div>
+
               <h3 className="mt-3 text-xl font-bold">
                 Pilot Launch
               </h3>
+
               <p className="mt-3">
                 Launching the first HERBuilt® cohort and putting the program
                 into action on active construction projects.
               </p>
             </div>
 
+            {/* Future */}
             <div className="text-center p-8 rounded-lg bg-[#F5F7FA]">
               <div className="text-[#078DCE] font-bold text-3xl">
                 Future
               </div>
+
               <h3 className="mt-3 text-xl font-bold">
                 Expanding Career Pathways
               </h3>
+
               <p className="mt-3">
                 Growing opportunities for women and creating lasting change
                 across the construction industry.
@@ -322,6 +382,52 @@ export default function HerBuilt() {
             </div>
 
           </div>
+        </div>
+      </div>
+
+      {/* Partners */}
+      <div className="max-w-[1140px] w-full px-5 lg:px-0 py-16 mx-auto">
+
+        <div className="text-center">
+          <h4>OUR PARTNERS</h4>
+
+          <h2 className="mt-2">
+            Building HERBuilt® Together
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+
+          {/* Education Partner */}
+          <div className="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center justify-center text-center min-h-[280px]">
+
+            <h4 className="text-xl font-bold mb-6">
+              Education Partner
+            </h4>
+
+            <img
+              src="/logos/STC-Primary-Logo.png"
+              alt="South Texas College"
+              className="max-w-[400px] max-h-[230px] object-contain"
+            />
+
+          </div>
+
+          {/* Pilot Subcontractor Partner */}
+          <div className="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center justify-center text-center min-h-[280px]">
+
+            <h4 className="text-xl font-bold mb-6">
+              Pilot Subcontractor Partner
+            </h4>
+
+            <img
+              src="/logos/subcontractor-logo.png"
+              alt="Gonzalez Concrete"
+              className="max-w-[400px] max-h-[230px] object-contain"
+            />
+
+          </div>
+
         </div>
       </div>
 
@@ -366,7 +472,6 @@ export default function HerBuilt() {
 
         </div>
       </div>
-
 
       {/* AHSTI Partner / Certification Logos */}
       <div className="py-10">
