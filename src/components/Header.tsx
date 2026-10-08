@@ -28,8 +28,10 @@ const navItems = [
       { name: "Make A Payment", link: "/make-a-payment" },
     ],
   },
+  { name: "HERBuilt®", link: "/herbuilt" },
   { name: "Careers", link: "/careers" },
   { name: "Cosmic Glow 5K", link: "https://runsignup.com/Race/TX/Mcallen/CosmicGlow5KRunWalk" },
+  { name: "Contact", link: "/contact" },
 ];
 
 
@@ -119,14 +121,14 @@ export default function Header() {
       <div className="bg-white shadow-md flex flex-col">
         <div className="max-w-[1140px] w-full py-5 px-4 mx-auto flex flex-row text-black justify-between gap-10 items-center">
           {/* Logo */}
-          <div className="flex w-auto sm:w-1/5">
+          <div className="flex w-auto">
             <Link href="/">
               <Image
                 src="/logos/logo-50.png"
                 alt="Affordable Homes of South Texas Logo"
                 width={1438}
                 height={795}
-                className="h-auto w-[180px] sm:w-[200px] md:w-[180px]"
+                className="h-auto w-[160px] sm:w-[180px] md:w-[160px]"
               />
             </Link>
           </div>
@@ -168,11 +170,11 @@ export default function Header() {
               </div>
             ))}
 
-            <Link href="/contact" className="w-[140px]">
+            {/* <Link href="/contact" className="w-[140px]">
               <Button className="lg:w-[140px] py-6" size="lg">
                 Contact Us
               </Button>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -213,11 +215,11 @@ export default function Header() {
               </div>
             ))}
 
-            <Link href="/contact" onClick={() => setMenuOpen(false)}>
+            {/* <Link href="/contact" onClick={() => setMenuOpen(false)}>
               <Button className="w-full mt-2 py-6" size="lg">
                 Contact
               </Button>
-            </Link>
+            </Link> */}
           </div>
         )}
       </div>
