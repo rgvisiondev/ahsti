@@ -12,6 +12,7 @@ const SliderImages = () => {
     { img: "/credentials/6.png" },
     { img: "/credentials/7.png" },
     { img: "/credentials/8.png" },
+    { img: "/credentials/9.png" },
   ];
 
   const duplicatedSlides = [...slides, ...slides];
