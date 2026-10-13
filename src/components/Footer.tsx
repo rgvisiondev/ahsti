@@ -6,11 +6,9 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Subdivisions", href: "/subdivisions" },
-    { name: "Buy A Home", href: "/buy-a-home" },
-    { name: "Repair My Home", href: "/repair-my-home" },
-    { name: "Make a Payment", href: "/make-a-payment" },
     { name: "Careers", href: "/careers" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms and Conditions", href: "/terms-and-conditions" },
   ];
 
   const subdivisions = [
