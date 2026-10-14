@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
 const fiveKUrl = "https://runsignup.com/Race/TX/Mcallen/CosmicGlow5KRunWalk";
-const flyerUrl = "/files/popups/Fall-Event-Flyer.png";
+const flyerUrl = "/files/popups/Flyer_HomeownershipSpooktacular.png";
 const flyerDismissedKey = "ahsti-fall-event-flyer-dismissed";
 
 type EventPopupsProps = {
@@ -14,7 +14,7 @@ type EventPopupsProps = {
 
 export default function EventPopups({
   enableFiveK = true,
-  enableFlyer = false, //disable flyer
+  enableFlyer = true, //disable flyer
 }: EventPopupsProps) {
   const [showFiveK, setShowFiveK] = useState(enableFiveK);
   const [showFlyer, setShowFlyer] = useState(false);
