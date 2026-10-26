@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 export default function About() {
 
   const leaders = [
-    { name: "Myra L. Martinez", role: "President/CEO", image: "/team/myra.png" },
-    { name: "Cynthia Torres", role: "Executive Vice President/CFO", image: "/team/cynthia.png" },
-    { name: "Aidee Castro", role: "Vice President/Director of Lending", image: "/team/aidee.png" },
-    { name: "Tony Fernandez", role: "Vice President/Construction Director", image: "/team/tony.png" },
-    { name: "Janie Vela", role: "Vice President/Director of Homebuyer Development", image: "/team/janie.png" },
-    { name: "Xavier Jimenez", role: "Vice President/Director of Real Estate Services", image: "/team/xavier.png" }
+    { name: "Myra L. Martinez", role: "President / CEO", image: "/team/myra.png" },
+    { name: "Cynthia Torres", role: "Executive Vice President / CFO", image: "/team/cynthia.png" },
+    { name: "Aidee Castro", role: "Executive Vice President / Chief Operations Officer", image: "/team/aidee.png" },
+    { name: "Tony Fernandez", role: "Vice President / Construction Director", image: "/team/tony.png" },
+    { name: "Janie Vela", role: "Vice President / Director of Homebuyer Development", image: "/team/janie.png" },
+    { name: "Xavier Jimenez", role: "Vice President / Director of Real Estate Services", image: "/team/xavier.png" }
   ];
 
   const board = [
