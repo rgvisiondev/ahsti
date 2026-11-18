@@ -7,6 +7,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const navItems = [
+  { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Subdivisions", link: "/subdivisions" },
   {
@@ -30,7 +31,6 @@ const navItems = [
   },
   { name: "HERBuilt®", link: "/herbuilt" },
   { name: "Careers", link: "/careers" },
-  { name: "Cosmic Glow 5K", link: "https://runsignup.com/Race/TX/Mcallen/CosmicGlow5KRunWalk" },
   { name: "Contact", link: "/contact" },
 ];
 
