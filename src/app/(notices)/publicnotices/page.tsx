@@ -41,7 +41,7 @@ export default function PublicNotices() {
                 {notice.name}
               </h3>
               
-            <Link href={notice.href} target="_blank" className="w-full">
+            <Link href={notice.href} target="_blank" className="flex w-full justify-center">
               <Button className="lg:w-full py-6" size="lg">
                 View Agenda
               </Button>
