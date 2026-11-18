@@ -13,7 +13,7 @@ type EventPopupsProps = {
 };
 
 export default function EventPopups({
-  enableFiveK = true,
+  enableFiveK = false,
   enableFlyer = true, //disable flyer
 }: EventPopupsProps) {
   const [showFiveK, setShowFiveK] = useState(enableFiveK);
